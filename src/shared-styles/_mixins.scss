@@ -1,0 +1,90 @@
+@import './variables.scss';
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+@mixin full-size() {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+@mixin center-vert() {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin center-horz() {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin center-both() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+@mixin flex-wrap() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .flex-item {
+    max-width: 50%;
+
+    &--top {
+      align-self: flex-start;
+    }
+    &--bottom {
+      align-self: flex-end;
+    }
+  }
+}
+
+@mixin big-center() {
+  @include center-both();
+
+  clear: both;
+  text-align: center;
+  font-size: $font-size-lg;
+  font-family: $font-family-quote;
+  letter-spacing: $letter-spacing;
+  font-weight: 600;
+  min-width: $screen-size-tablet;
+  line-height: 1.15em;
+
+  // todo: this will duplicate these rules... fix later
+  @media screen and (max-width: $screen-size-tablet) {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: $screen-size-mobile) {
+    font-size: $font-size-lg * .75;
+    line-height: 1.15em;
+    width: 80vw;
+    max-height: 60vh;
+    overflow-y: auto;
+    word-wrap: break-word;
+  }
+}
+
+@mixin bottom-button() {
+  @include center-horz();
+
+  font-size: $font-size-bottom-button;
+
+  bottom: 0;
+  margin-bottom: 2rem;
+}

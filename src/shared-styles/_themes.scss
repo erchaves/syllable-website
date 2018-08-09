@@ -1,0 +1,28 @@
+@import '../../shared-styles/variables.scss';
+@import '../../shared-styles/mixins.scss';
+
+%theme-primary {
+  &,
+  a {
+    color: $color-primary;
+  }
+
+  background: $color-secondary;
+}
+
+%theme-secondary {
+  &,
+  a {
+    color: $color-secondary;
+  }
+
+  background: $color-primary;
+
+  .featured {
+    @include big-center();
+  }
+
+  .close-button {
+    @include bottom-button();
+  }
+}

@@ -1,0 +1,58 @@
+@import './shared-styles/variables.scss';
+@import './shared-styles/mixins.scss';
+@import './shared-styles/reset.css';
+@import './shared-styles/fontello/css/fontello.css';
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
+// @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
+
+@font-face {
+  font-family: 'BerlingskeSerifXBd';
+  src: url('./fonts/BerlingskeSerif-XBd.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/BerlingskeSerif-XBd.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/BerlingskeSerif-XBd.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+html,
+body {
+  font-size: $font-size-base;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  top: 0;
+  left: 0;
+  position: absolute;
+  min-height: 100vh;
+  min-width: 100vw;
+  // when it was just the body, it wasn't winning out for some reason
+  font-family: $font-family;
+
+  .menu {
+    @include center-horz();
+
+    top: 0;
+    margin-top: 2rem;
+  }
+}
+
+.page-inner {
+  padding: 1rem;
+}
+
+.flex-wrap {
+  @include flex-wrap();
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
