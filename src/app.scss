@@ -1,17 +1,8 @@
 @import './shared-styles/variables.scss';
 @import './shared-styles/mixins.scss';
 @import './shared-styles/reset.css';
-@import './shared-styles/fontello/css/fontello.css';
 
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
-// @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
-
-@font-face {
-  font-family: 'BerlingskeSerifXBd';
-  src: url('./fonts/BerlingskeSerif-XBd.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./fonts/BerlingskeSerif-XBd.woff') format('woff'), /* Pretty Modern Browsers */
-       url('./fonts/BerlingskeSerif-XBd.ttf')  format('truetype'); /* Safari, Android, iOS */
-}
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
 
 html,
 body {

@@ -17,12 +17,4 @@
   }
 
   background: $color-primary;
-
-  .featured {
-    @include big-center();
-  }
-
-  .close-button {
-    @include bottom-button();
-  }
 }
