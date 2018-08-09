@@ -10,7 +10,9 @@ class Menu extends React.Component {
             <a href="/projects">Projects</a>
           </li>
           <li className="item-primary flex-item">
-            <a href="/">Home</a>
+            <a href="/">
+              <img src="/syllable-logo.svg" alt="Syllable Logo" className="syllable-logo" />
+            </a>
           </li>
           <li className="item-secondary flex-item">
             <a href="/about">About</a>
