@@ -7,16 +7,13 @@ class Menu extends React.Component {
       <div className="menu">
         <ul className="flex-wrap">
           <li className="item-secondary flex-item">
-            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
           </li>
           <li className="item-primary flex-item">
-            <a href="/">Heard
-              <br />
-              <span className="no-wrap">at Work</span>
-            </a>
+            <a href="/">Home</a>
           </li>
           <li className="item-secondary flex-item">
-            <a href="/contact">Contact</a>
+            <a href="/about">About</a>
           </li>
         </ul>
       </div>

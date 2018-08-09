@@ -10,12 +10,12 @@ export default {
         component: 'src/Components/Home',
       },
       {
-        path: '/about',
-        component: 'src/Components/About',
+        path: '/projects',
+        component: 'src/Components/Projects',
       },
       {
-        path: '/contact',
-        component: 'src/Components/Contact',
+        path: '/about',
+        component: 'src/Components/About',
       },
       {
         path: '404',
