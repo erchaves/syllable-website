@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
 
-class SideMenu extends React.Component {
+class NavSide extends React.Component {
   render() {
     return (
       <div className="side-menu">
@@ -30,4 +30,4 @@ class SideMenu extends React.Component {
   }
 }
 
-export default SideMenu;
+export default NavSide;

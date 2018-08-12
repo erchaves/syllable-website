@@ -1,6 +1,6 @@
 import React from 'react';
-import MainMenu from '../MainMenu';
-import SideMenu from '../SideMenu';
+import NavMain from '../NavMain';
+import NavSide from '../NavSide';
 import './index.scss';
 
 class Home extends React.Component {
@@ -12,12 +12,12 @@ class Home extends React.Component {
     return (
       <div className="page page-home">
         <div className="page-inner">
-          <MainMenu />
+          <NavMain />
           <div className="page-panel">
             <a href="/projects" className="slogan">Tech that speaks human</a>
           </div>
         </div>
-        <SideMenu />
+        <NavSide />
       </div>
     );
   }

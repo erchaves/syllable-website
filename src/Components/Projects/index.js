@@ -1,6 +1,6 @@
 import React from 'react';
-import MainMenu from '../MainMenu';
-import SideMenu from '../SideMenu';
+import NavMain from '../NavMain';
+import NavSide from '../NavSide';
 import './index.scss';
 
 class Projects extends React.Component {
@@ -8,7 +8,7 @@ class Projects extends React.Component {
     return (
       <div className="page page-projects">
         <div className="page-inner">
-          <MainMenu />
+          <NavMain />
           <div className="page-panel">
             <div className="flex-container">
               <div className="flex-cols-2">
@@ -24,7 +24,7 @@ class Projects extends React.Component {
             </div>
           </div>
         </div>
-        <SideMenu />
+        <NavSide />
       </div>
     );
   }

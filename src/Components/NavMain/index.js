@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
 
-class MainMenu extends React.Component {
+class NavMain extends React.Component {
   render() {
     return (
       <div className="main-menu">
@@ -27,4 +27,4 @@ class MainMenu extends React.Component {
   }
 }
 
-export default MainMenu;
+export default NavMain;
