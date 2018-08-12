@@ -21,7 +21,6 @@
     "sass-loader": "^7.0.3"
   },
   "devDependencies": {
-    "eslint-config-react-tools": "1.x.x",
-    "serve": "6"
+    "eslint-config-react-tools": "1.x.x"
   }
 }
