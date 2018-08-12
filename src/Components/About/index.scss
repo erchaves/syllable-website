@@ -2,12 +2,6 @@
 @import '../../shared-styles/mixins.scss';
 
 .page-about {
-  .page-panel {
-    @include full-size();
-    // add the top height adjustment back
-    top: $menu-height;
-  }
-
   .flex-container {
     min-height: 100%;
   }
@@ -20,8 +14,6 @@
   }
 
   .flex-cols-2 {
-    section {
-      padding: 2rem;
-    }
+
   }
 }

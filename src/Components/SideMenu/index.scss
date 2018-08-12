@@ -20,7 +20,7 @@
   .bar {
     position: absolute;
     height: 100%;
-    width: $vert-menu-width;
+    width: $side-menu-width;
     content: '';
     background: $color-primary;
   }
@@ -30,7 +30,6 @@
     bottom: $tagline-offset;
     background: none;
     text-align: center;
-    font-size: 1.25rem;
     // transform: rotate(-90deg);
 
     .menu-item {

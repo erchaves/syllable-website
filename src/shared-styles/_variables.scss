@@ -3,23 +3,35 @@ $color-primary: #495C72;
 // for comparison
 // $color-tumblr: #36465d;
 $color-white: #ffffff;
+$color-link: #002958;
+$color-link: #003470;
+$color-link: #004799;
+$color-link: #245288;
+$color-link: #00679d;
+
 $color-secondary: $color-white;
 
 $font-family: 'Karla', sans-serif;
 
-$letter-spacing: -.01em;
+$letter-spacing: -.035em;
 $font-size-base: 16px;
-$font-size-sm: 1.125rem;
+$font-size-sm: 1.25rem;
 $font-size-md: 1.5rem;
 $font-size-lg: 3.5rem;
-$font-size-bottom-button: 3rem;
+$line-height: 1.2em;
+$font-weight-bold: 600;
+
+$margin-sm: 1rem;
+$margin-md: 1.5rem;
 
 $screen-size-tablet: 56rem;
 $screen-size-mobile: 45rem;
-$button-effect-height: 2px;
+
+// test for shorter screens
 // $page-width: 60rem; //960px
 $page-width: 100%;
-$vert-menu-width: 2.5rem;
+
+$side-menu-width: 2.5rem;
 $border-size: .25rem;
 $menu-height: 5rem;
 $opacity-off-hover: .85;

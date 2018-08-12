@@ -1,7 +1,7 @@
 @import '../../shared-styles/variables.scss';
 @import '../../shared-styles/mixins.scss';
 
-.menu {
+.main-menu {
   z-index: 3;
   // border-bottom: $border-size solid $color-primary;
   box-shadow: 0px 1px 8px 0px $color-primary;
@@ -17,6 +17,10 @@
 
   a {
     color: $color-primary;
+
+    &:hover {
+      color: $color-link;
+    }
   }
 
   li {
@@ -29,11 +33,7 @@
     // todo: there might be a better solution here
     padding: 0 9%;
     text-align: center;
-    letter-spacing: $letter-spacing;
-    // font-size: $font-size-sm;
-    // todo: make a var
-    font-size: 1.25rem;
-    // font-weight: 600;
+    // font-weight: $font-weight-bold;
 
     &.item-primary {
       font-size: $font-size-md;

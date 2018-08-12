@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '../Menu';
+import MainMenu from '../MainMenu';
 import SideMenu from '../SideMenu';
 import './index.scss';
 
@@ -12,7 +12,7 @@ class Home extends React.Component {
     return (
       <div className="page page-home">
         <div className="page-inner">
-          <Menu />
+          <MainMenu />
           <div className="page-panel">
             <a href="/projects" className="slogan">Tech that speaks human</a>
           </div>

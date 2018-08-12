@@ -3,10 +3,6 @@
 
 .page-home {
   .page-panel {
-    @include full-size();
-    // add the top height adjustment back
-    top: $menu-height;
-
     // background: url(/florence-stairs.jpg) no-repeat center center fixed;
     // background: url(/background-cropped.jpg) no-repeat center center fixed;
     background: url(/background-temp.jpg) no-repeat center center fixed;
@@ -20,7 +16,7 @@
     bottom: $tagline-offset;
     color: $color-secondary;
     font-size: $font-size-md;
-    font-weight: 600;
+    font-weight: $font-weight-bold;
     border: $border-size solid $color-secondary;
     padding: 1rem;
     cursor: pointer;
@@ -36,7 +32,7 @@
 
     &:hover {
       background: white;
-      color: $color-primary;
+      color: $color-link;
     }
   }
 }

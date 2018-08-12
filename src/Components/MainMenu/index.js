@@ -1,10 +1,10 @@
 import React from 'react';
 import './index.scss';
 
-class Menu extends React.Component {
+class MainMenu extends React.Component {
   render() {
     return (
-      <div className="menu">
+      <div className="main-menu">
         <ul className="flex-wrap">
           <li className="item-secondary flex-item">
             <a href="/projects">Projects</a>
@@ -27,4 +27,4 @@ class Menu extends React.Component {
   }
 }
 
-export default Menu;
+export default MainMenu;

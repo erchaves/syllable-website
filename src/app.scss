@@ -14,11 +14,19 @@ body {
   margin: 0;
   padding: 0;
   font-family: $font-family;
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
+  font-size: $font-size-sm;
   background: $color-primary;
 }
 
 a {
   text-decoration: none;
+  color: $color-link;
+}
+
+p {
+  margin-bottom: $margin-md;
 }
 
 .page {
@@ -27,22 +35,32 @@ a {
   font-family: $font-family;
   width: $page-width;
   background: $color-white;
+  color: $color-primary;
   margin: 0 auto;
   height: 100vh;
 }
 
-.page-inner {
-  margin: 0 auto;
-  padding: 0 $vert-menu-width;
-}
+// .page-inner {
+//   margin: 0 auto;
+// }
 
 .page-panel {
-  // @include full-size();
-  position: relative;
+  @include full-size();
   // offset for the menu above
   top: $menu-height;
+  // offset for the side-menus
+  padding: 0 $side-menu-width;
 
   background: $color-secondary;
+
+  .h2 {
+    font-weight: $font-weight-bold;
+    margin-bottom: $margin-sm;
+  }
+
+  section {
+    padding: 3rem;
+  }
 }
 
 .flex-wrap {
@@ -51,11 +69,16 @@ a {
 
 .flex-container {
   display: flex;
+  background: inherit;
 }
 
 .flex-cols-2 {
   flex-grow: 1;
   width: 50%;
+
+  &.col-right {
+    border-left: 2px solid $color-primary;
+  }
 }
 
 .no-wrap {
