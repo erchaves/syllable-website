@@ -1,8 +1,9 @@
-// orange
-$color-primary: #f54e47;
-// $color-primary: #f65b54;
-// blue
-$color-secondary: #031465;
+// brand blue
+$color-primary: #495C72;
+// for comparison
+// $color-tumblr: #36465d;
+$color-white: #ffffff;
+$color-secondary: $color-white;
 
 $font-family: 'Karla', sans-serif;
 
@@ -16,3 +17,10 @@ $font-size-bottom-button: 3rem;
 $screen-size-tablet: 56rem;
 $screen-size-mobile: 45rem;
 $button-effect-height: 2px;
+// $page-width: 60rem; //960px
+$page-width: 100%;
+$vert-menu-width: 2.5rem;
+$border-size: .25rem;
+$menu-height: 5rem;
+$opacity-off-hover: .85;
+$tagline-offset: 8vh;

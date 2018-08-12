@@ -1,5 +1,27 @@
-@import '../../shared-styles/themes.scss';
+@import '../../shared-styles/variables.scss';
+@import '../../shared-styles/mixins.scss';
 
 .page-about {
-  @extend %theme-secondary;
+  .page-panel {
+    @include full-size();
+    // add the top height adjustment back
+    top: $menu-height;
+  }
+
+  .flex-container {
+    min-height: 100%;
+  }
+
+  .background-map {
+    height: 100%;
+    width: 100%;
+    background: url(/background-map.png) no-repeat center center;
+    background-size: cover;
+  }
+
+  .flex-cols-2 {
+    section {
+      padding: 2rem;
+    }
+  }
 }

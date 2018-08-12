@@ -1,7 +1,42 @@
 @import '../../shared-styles/variables.scss';
 @import '../../shared-styles/mixins.scss';
-@import '../../shared-styles/themes.scss';
 
 .page-home {
-  @extend %theme-primary;
+  .page-panel {
+    @include full-size();
+    // add the top height adjustment back
+    top: $menu-height;
+
+    // background: url(/florence-stairs.jpg) no-repeat center center fixed;
+    // background: url(/background-cropped.jpg) no-repeat center center fixed;
+    background: url(/background-temp.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  .slogan {
+    @include center-horz();
+
+    background: none;
+    bottom: $tagline-offset;
+    color: $color-secondary;
+    font-size: $font-size-md;
+    font-weight: 600;
+    border: $border-size solid $color-secondary;
+    padding: 1rem;
+    cursor: pointer;
+    transition: .25s;
+    transition-property: background, color;
+
+    &:focus {
+      outline-offset: 0;
+      outline-style: solid;
+      outline-width: 2px;
+      outline-color: white;
+    }
+
+    &:hover {
+      background: white;
+      color: $color-primary;
+    }
+  }
 }

@@ -11,7 +11,11 @@ class Menu extends React.Component {
           </li>
           <li className="item-primary flex-item">
             <a href="/">
-              <img src="/syllable-logo.svg" alt="Syllable Logo" className="syllable-logo" />
+              {/*
+                <span className="syllable-logo icon-syllable-logo"></span>
+                <img className="syllable-logo" src="/syllable-logo-new-2.png" />
+              */}
+                <img className="syllable-logo" src="/syllable-logo-new.png" />
             </a>
           </li>
           <li className="item-secondary flex-item">

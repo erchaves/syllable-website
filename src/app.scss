@@ -1,6 +1,7 @@
 @import './shared-styles/variables.scss';
 @import './shared-styles/mixins.scss';
 @import './shared-styles/reset.css';
+@import './shared-styles/fontello/css/fontello.css';
 
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700');
 
@@ -13,6 +14,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: $font-family;
+  background: $color-primary;
 }
 
 a {
@@ -20,28 +22,40 @@ a {
 }
 
 .page {
-  top: 0;
-  left: 0;
-  position: absolute;
-  min-height: 100vh;
-  min-width: 100vw;
+  position: relative;
   // when it was just the body, it wasn't winning out for some reason
   font-family: $font-family;
-
-  .menu {
-    @include center-horz();
-
-    top: 0;
-    margin-top: 2rem;
-  }
+  width: $page-width;
+  background: $color-white;
+  margin: 0 auto;
+  height: 100vh;
 }
 
 .page-inner {
-  padding: 1rem;
+  margin: 0 auto;
+  padding: 0 $vert-menu-width;
+}
+
+.page-panel {
+  // @include full-size();
+  position: relative;
+  // offset for the menu above
+  top: $menu-height;
+
+  background: $color-secondary;
 }
 
 .flex-wrap {
   @include flex-wrap();
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-cols-2 {
+  flex-grow: 1;
+  width: 50%;
 }
 
 .no-wrap {
