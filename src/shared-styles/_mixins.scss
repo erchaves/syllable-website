@@ -51,3 +51,26 @@
     }
   }
 }
+
+@mixin small-text() {
+  font-size: $font-size-sm-x;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-small-text;
+  font-weight: $font-weight-bold;
+}
+
+@mixin hover-effect() {
+  opacity: $opacity-off-hover;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@mixin hover-effect-link() {
+  @include hover-effect();
+
+  &:hover {
+    color: $color-link;
+  }
+}

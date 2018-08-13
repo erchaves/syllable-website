@@ -4,7 +4,7 @@ import './index.scss';
 class NavSide extends React.Component {
   render() {
     return (
-      <div className="side-menu">
+      <div className="nav-side">
         <div className="bar-wrap left">
           <div className="bar">
             <div className="menu">

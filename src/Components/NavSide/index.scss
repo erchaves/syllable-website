@@ -1,7 +1,7 @@
 @import '../../shared-styles/variables.scss';
 @import '../../shared-styles/mixins.scss';
 
-.side-menu {
+.nav-side {
   .bar-wrap {
     position: fixed;
     z-index: 2;
@@ -20,7 +20,7 @@
   .bar {
     position: absolute;
     height: 100%;
-    width: $side-menu-width;
+    width: $nav-side-width;
     content: '';
     background: $color-primary;
   }
@@ -29,18 +29,17 @@
     position: absolute;
     bottom: $tagline-offset;
     background: none;
+    width: 100%;
     text-align: center;
     // transform: rotate(-90deg);
 
     .menu-item {
+      @include hover-effect();
+
       color: white;
       margin-bottom: 1.25rem;
       display: block;
-      opacity: $opacity-off-hover;
-
-      &:hover {
-        opacity: 1;
-      }
+      margin-left: -.15em;
 
       &:last-child {
         margin-bottom: 0;
@@ -51,12 +50,10 @@
     .icon-twitter {
       font-size: .85em;
       // make it feel more centered
-      margin-left: -.15em;
+      margin-left: -.07em;
     }
 
     .icon-behance {
-      // make it feel more centered
-      margin-left: -.1em;
     }
   }
 }

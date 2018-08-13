@@ -1,7 +1,7 @@
 @import '../../shared-styles/variables.scss';
 @import '../../shared-styles/mixins.scss';
 
-.main-menu {
+.nav-main {
   z-index: 3;
   // border-bottom: $border-size solid $color-primary;
   box-shadow: 0px 1px 8px 0px $color-primary;
@@ -12,7 +12,7 @@
   left: 0;
 
   .flex-wrap {
-    height: $menu-height;
+    height: $nav-main-height;
   }
 
   a {
@@ -49,8 +49,8 @@
     &:before {
       width: auto;
     }
-
   }
+
   img.syllable-logo  {
     width: 4em;
   }

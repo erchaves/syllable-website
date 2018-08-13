@@ -1,5 +1,44 @@
 @import '../../shared-styles/variables.scss';
+@import '../../shared-styles/mixins.scss';
 
 .page-projects {
+  .flex-container {
+    min-height: 100%;
+  }
 
+  .col-left {
+    position: relative;
+  }
+
+  .portfolio-summary-section {
+    min-height: 100%;
+
+    .portfolio-summary {
+      @include center-vert();
+
+      left: 0;
+      right: 0;
+      padding: inherit;
+    }
+  }
+
+  .arrow {
+    text-align: center;
+    width: 100%;
+
+    &.arrow-down {
+      transform: rotate(180deg);
+    }
+
+    button {
+      @include hover-effect-link();
+
+      font-size: $font-size-md;
+      cursor: pointer;
+      display: inline-block;
+      // make the targer nicer with an extra .5rem
+      margin-bottom: $margin-lg - .5rem;
+      padding: .5rem;
+    }
+  }
 }

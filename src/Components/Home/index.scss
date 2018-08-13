@@ -12,16 +12,18 @@
   .slogan {
     @include center-horz();
 
-    background: none;
     bottom: $tagline-offset;
     color: $color-secondary;
     font-size: $font-size-md;
     font-weight: $font-weight-bold;
     border: $border-size solid $color-secondary;
-    padding: 1rem;
+    padding: .75rem 1rem;
     cursor: pointer;
     transition: .25s;
-    transition-property: background, color;
+    transition-property: background, color, border-radius;
+
+    // darken the background slightly to make the text pop
+    background: rgba(73, 92, 114, 0.25);
 
     &:focus {
       outline-offset: 0;
@@ -33,6 +35,9 @@
     &:hover {
       background: white;
       color: $color-link;
+      // soften the corners just slightly
+      border-radius: $border-radius-slight;
+      outline: none;
     }
   }
 }

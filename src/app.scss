@@ -29,6 +29,10 @@ p {
   margin-bottom: $margin-md;
 }
 
+button {
+  border: none;
+}
+
 .page {
   position: relative;
   // when it was just the body, it wasn't winning out for some reason
@@ -46,10 +50,10 @@ p {
 
 .page-panel {
   @include full-size();
-  // offset for the menu above
-  top: $menu-height;
-  // offset for the side-menus
-  padding: 0 $side-menu-width;
+  // offset for the main nav
+  top: $nav-main-height;
+  // offset for the nav-sides
+  padding: 0 $nav-side-width;
 
   background: $color-secondary;
 
@@ -59,7 +63,7 @@ p {
   }
 
   section {
-    padding: 3rem;
+    padding: $padding-for-section;
   }
 }
 

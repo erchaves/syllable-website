@@ -1,0 +1,29 @@
+@import '../../shared-styles/variables.scss';
+@import '../../shared-styles/mixins.scss';
+
+.project-summary {
+  text-align: center;
+
+  .name,
+  .skills {
+    @include small-text();
+  }
+
+  .name {
+    margin-bottom: $margin-md;
+  }
+
+  .skills {
+
+  }
+
+  .summary {
+    font-size: $font-size-lg;
+    margin-bottom: $margin-md;
+  }
+
+  .pipe {
+    padding: .35rem;
+    // font-weight: normal;
+  }
+}
