@@ -10,9 +10,26 @@
     position: relative;
   }
 
-  .portfolio-summary-section {
-    min-height: 100%;
+  .portfolio-carrousel-section {
+    position: relative;
+    // defer this to the portfolio-carrousel-wrap
+    padding: 0;
+    height: 100%;
+    overflow-y: hidden;
 
+    .portfolio-carrousel-wrap {
+      // now add the padding here instead of above
+      padding: $padding-for-section;
+      position: absolute;
+      overflow-y: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .portfolio-summary-section {
     .portfolio-summary {
       @include center-vert();
 

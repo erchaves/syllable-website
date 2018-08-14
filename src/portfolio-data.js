@@ -26,7 +26,8 @@ const projects = [
     "skills": [
       "Front End Development",
       "Project Management",
-    ]
+    ],
+    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/93b35367582625.5b3e78819374c.png",
   },
   {
     "id": 67586145,
@@ -35,7 +36,8 @@ const projects = [
     "skills": [
       "Front End Development",
       "Project Management",
-    ]
+    ],
+    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/349c0267586145.5b3fcfeed34d7.png",
   },
   {
     "id": 58835823,
@@ -44,7 +46,8 @@ const projects = [
     "skills": [
       "Front End Development",
       "Project Management",
-    ]
+    ],
+    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/b87d1058835823.5a0b3d8231e66.png",
   },
   {
     "id": 45462857,
@@ -53,7 +56,8 @@ const projects = [
     "skills": [
       "Front End Development",
       "Project Management",
-    ]
+    ],
+    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/1d2d8c45462857.5831fae246329.png",
   },
   {
     "id": 34135103,
@@ -62,7 +66,8 @@ const projects = [
     "skills": [
       "Front End Development",
       "Project Management",
-    ]
+    ],
+    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/c593b334135103.56c530304442e.png",
   },
 ];
 

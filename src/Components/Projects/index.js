@@ -2,6 +2,7 @@ import React from 'react';
 import NavMain from '../NavMain';
 import NavSide from '../NavSide';
 import ProjectSummary from '../ProjectSummary';
+import PortfolioCarrousel from '../PortfolioCarrousel';
 import portfolioData from '../../portfolio-data';
 
 import './index.scss';
@@ -35,9 +36,9 @@ class Projects extends React.Component {
                 </section>
               </div>
               <div className="flex-cols-2 col-right">
-                <section>
-                  <div className="portfolio-carrousel">
-                    1dsgsd sg dsfg sdfg dsfg dfg dsf s
+                <section className="portfolio-carrousel-section">
+                  <div className="portfolio-carrousel-wrap">
+                    <PortfolioCarrousel projects={portfolioData} />
                   </div>
                 </section>
               </div>
