@@ -25,27 +25,26 @@ const projects = [
     "summary": "A music streaming web app that helps film studios find high quality production soundtracks",
     "skills": [
       "Front End Development",
-      "Project Management",
+      "Project Lead",
     ],
     "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/93b35367582625.5b3e78819374c.png",
   },
   {
     "id": 67586145,
     "name": "Amplify App",
-    "summary": "sdgfdsgds",
+    "summary": "Amplify is a web application that connects youth with policy makers, organizations, and youth-serving agencies by gathering youth-generated data to inform city-wide policy making and local civic action.",
     "skills": [
-      "Front End Development",
       "Project Management",
+      "Technology Lead",
     ],
     "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/349c0267586145.5b3fcfeed34d7.png",
   },
   {
     "id": 58835823,
     "name": "Barnes Foundation Collection Website",
-    "summary": "sdgfdsgds",
+    "summary": "A Collections Website for the Barnes Foundation in Philadelphia. It is designed to search art works with a deep focus on visual properties such as light, line, color, and space, in addition to more traditional searches by artist name, media, or historical movement.",
     "skills": [
       "Front End Development",
-      "Project Management",
     ],
     "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/b87d1058835823.5a0b3d8231e66.png",
   },
@@ -55,7 +54,6 @@ const projects = [
     "summary": "sdgfdsgds",
     "skills": [
       "Front End Development",
-      "Project Management",
     ],
     "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/1d2d8c45462857.5831fae246329.png",
   },
@@ -64,7 +62,6 @@ const projects = [
     "name": "Seeso",
     "summary": "sdgfdsgds",
     "skills": [
-      "Front End Development",
       "Project Management",
     ],
     "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/c593b334135103.56c530304442e.png",

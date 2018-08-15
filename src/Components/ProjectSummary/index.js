@@ -9,7 +9,7 @@ class ProjectSummary extends React.Component {
     } = this.props;
 
     return (
-      <div className="project-summary">
+      <div className="project-summary" data-is-current-project={this.props.isCurrentProject} >
         <div className="name">
           <span className="pipe">|</span>
           {project.name}
@@ -21,7 +21,7 @@ class ProjectSummary extends React.Component {
         <div className="skills">
           {
             project.skills.map(skill => {
-              return <span className="skill">
+              return <span className="skill" key={skill}>
                 <span className="pipe">|</span>
                 <span>{skill}</span>
               </span>

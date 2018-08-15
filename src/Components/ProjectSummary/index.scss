@@ -3,6 +3,21 @@
 
 .project-summary {
   text-align: center;
+  padding: 0 $margin-sm;
+
+  &[data-is-current-project='false'] {
+    // instead of hiding it, make it height 0 so the transition works.
+    opacity: 0;
+    height: 0;
+  }
+
+  &[data-is-current-project='true'] {
+    height: auto;
+    opacity: 1;
+    display: block;
+    transition: $transition-time;
+    transition-property: opacity;
+  }
 
   .name,
   .skills {

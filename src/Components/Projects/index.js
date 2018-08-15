@@ -4,13 +4,55 @@ import NavSide from '../NavSide';
 import ProjectSummary from '../ProjectSummary';
 import PortfolioCarrousel from '../PortfolioCarrousel';
 import portfolioData from '../../portfolio-data';
-
 import './index.scss';
 
+const projects = portfolioData;
+
 class Projects extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      currentProject: 0,
+    };
+
+    this.handleClickPrev = this.handleClickPrev.bind(this);
+    this.handleClickNext = this.handleClickNext.bind(this);
+  }
+
+  getProjectIdx(newIdx) {
+    const projectsLen = projects.length;
+
+    if (typeof newIdx === 'undefined') {
+      return 0;
+    }
+
+    // wrap to bottom
+    if (newIdx >= projectsLen) {
+      return 0;
+    }
+
+    // wrap to top
+    if (newIdx < 0) {
+      return projectsLen - 1;
+    }
+
+    return newIdx;
+  }
+
+  handleClickPrev(e) {
+    const currProj = this.getProjectIdx(this.state.currentProject - 1);
+    this.setState({currentProject: currProj});
+  }
+
+  handleClickNext(e) {
+    const currProj = this.getProjectIdx(this.state.currentProject + 1);
+    this.setState({currentProject: currProj});
+  }
+
   render() {
     return (
-      <div className="page page-projects">
+      <div className="page page-projects side-arrows">
         <div className="page-inner">
           <NavMain />
           <div className="page-panel">
@@ -18,19 +60,17 @@ class Projects extends React.Component {
               <div className="flex-cols-2 col-left">
                 <section className="portfolio-summary-section">
                   <div className="portfolio-summary">
-                    <div className="arrow arrow-up">
-                      <button className="icon-arrow-up"></button>
+                    <div className="arrow arrow-prev">
+                      <button className="icon-arrow-up" onClick={this.handleClickPrev}></button>
                     </div>
                     {
                       // todo
-                      portfolioData.filter(project => {
-                        return project.id===67582625;
-                      }).map(project => {
-                        return <ProjectSummary project={project} />;
+                      projects.map((project, idx) => {
+                        return <ProjectSummary project={project} key={idx} isCurrentProject={this.state.currentProject === idx} />
                       })
                     }
-                    <div className="arrow arrow-down">
-                      <button className="icon-arrow-up"></button>
+                    <div className="arrow arrow-next">
+                      <button className="icon-arrow-up" onClick={this.handleClickNext}></button>
                     </div>
                   </div>
                 </section>
@@ -38,7 +78,7 @@ class Projects extends React.Component {
               <div className="flex-cols-2 col-right">
                 <section className="portfolio-carrousel-section">
                   <div className="portfolio-carrousel-wrap">
-                    <PortfolioCarrousel projects={portfolioData} />
+                    <PortfolioCarrousel projects={projects} />
                   </div>
                 </section>
               </div>

@@ -43,7 +43,7 @@
     text-align: center;
     width: 100%;
 
-    &.arrow-down {
+    &.arrow-next {
       transform: rotate(180deg);
     }
 
@@ -56,6 +56,44 @@
       // make the targer nicer with an extra .5rem
       margin-bottom: $margin-lg - .5rem;
       padding: .5rem;
+    }
+
+  }
+
+  // try this for a fix
+  &.side-arrows {
+    .arrow {
+      position: absolute;
+      top: 50%;
+      height: 0;
+
+      button {
+        transform: translateY(-50%);
+      }
+
+      &.arrow-prev {
+        button {
+          &:before {
+            transform: rotate(-90deg);
+          }
+        }
+
+        left: 0;
+        text-align: left;
+      }
+
+      &.arrow-next {
+        transform: none;
+
+        button {
+          &:before {
+            transform: rotate(90deg);
+          }
+        }
+
+        right: 0;
+        text-align: right;
+      }
     }
   }
 }
