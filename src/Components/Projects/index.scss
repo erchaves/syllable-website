@@ -96,4 +96,15 @@
       }
     }
   }
+
+  // fix for now to simplify things
+  &.single-project-view {
+    .portfolio-carrousel {
+      @include center-vert();
+
+      padding: inherit;
+      left: 0;
+      right: 0;
+    }
+  }
 }

@@ -6,7 +6,10 @@
   padding: 0 $margin-sm;
 
   &[data-is-current-project='false'] {
+    // todo
     // instead of hiding it, make it height 0 so the transition works.
+    display: none;
+    // for now just use display none and don't worry about the transition
     opacity: 0;
     height: 0;
   }

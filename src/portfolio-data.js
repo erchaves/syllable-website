@@ -55,7 +55,8 @@ const projects = [
     "skills": [
       "Front End Development",
     ],
-    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/1d2d8c45462857.5831fae246329.png",
+    // "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/1d2d8c45462857.5831fae246329.png",
+    "image": "/portfolio-images/quiddity.png",
   },
   {
     "id": 34135103,

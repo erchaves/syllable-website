@@ -52,7 +52,7 @@ class Projects extends React.Component {
 
   render() {
     return (
-      <div className="page page-projects side-arrows">
+      <div className="page page-projects side-arrows single-project-view">
         <div className="page-inner">
           <NavMain />
           <div className="page-panel">
@@ -78,7 +78,7 @@ class Projects extends React.Component {
               <div className="flex-cols-2 col-right">
                 <section className="portfolio-carrousel-section">
                   <div className="portfolio-carrousel-wrap">
-                    <PortfolioCarrousel projects={projects} />
+                    <PortfolioCarrousel projects={projects} currentProjectIdx={this.state.currentProject} />
                   </div>
                 </section>
               </div>

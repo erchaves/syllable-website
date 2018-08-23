@@ -8,12 +8,20 @@
   // left: 0;
   // right: 0;
 
-  .project-img {
-    background: grey;
-    height: 350px;
-    width: 100%;
-    display: inline-block;
-    opacity: .2;
-    border-bottom: 1rem solid #222;
+  .lazy-img {
+    img {
+      width: 100%;
+      display: inline-block;
+    }
   }
+
+  // for testing
+  // .project-img {
+  //   background: grey;
+  //   height: 350px;
+  //   width: 100%;
+  //   display: inline-block;
+  //   opacity: .2;
+  //   border-bottom: 1rem solid #222;
+  // }
 }
