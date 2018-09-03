@@ -22,7 +22,7 @@ class About extends React.Component {
                   <p>Syllable is a technology and design shop in Brooklyn, NY. </p>
                   <p>We make digital products, like websites and apps. Sometimes we design physical products, like interactive installations. We like to stay current on emerging technologies, like AR, and blockchain.</p>
                   <p>We think big-picture. We believe details matter.</p>
-                  <p>Technology is our craft. But our mission is to build things for human folks.</p>
+                  <p>Technology is our craft. But our mission is to build things for <span className="no-wrap">human folks.</span></p>
                   <p>Syllable is run by Eric Chaves. <a href="mailto:eric@syllable.productions" target='_blank' rel="noopener noreferrer">Say Hello!</a></p>
                 </section>
                 <section>
