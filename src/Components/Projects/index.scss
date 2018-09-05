@@ -12,14 +12,12 @@
 
   .portfolio-carrousel-section {
     position: relative;
-    // defer this to the portfolio-carrousel-wrap
+    // remove the padding for this portfolio-carrousel-wrap
     padding: 0;
     height: 100%;
     overflow-y: hidden;
 
     .portfolio-carrousel-wrap {
-      // now add the padding here instead of above
-      padding: $padding-for-section;
       position: absolute;
       overflow-y: auto;
       top: 0;
@@ -100,11 +98,11 @@
   // fix for now to simplify things
   &.single-project-view {
     .portfolio-carrousel {
-      @include center-vert();
+      // @include center-vert();
 
-      padding: inherit;
-      left: 0;
-      right: 0;
+      // padding: inherit;
+      // left: 0;
+      // right: 0;
     }
   }
 

@@ -7,8 +7,9 @@ class LazyImg extends React.Component {
 
     this.foo = 2;
     this.setLoader = this.setLoader.bind(this);
-    this.state = { imageStatus: "loading" };
+    this.state = { imageStatus: "" };
   }
+
   setLoader() {
     this.setState({ imageStatus: "loading" });
   }
@@ -25,11 +26,10 @@ class LazyImg extends React.Component {
 
   componentWillReceiveProps(props) {
     clearTimeout(this.loaderTimeout);
-    this.loaderTimeout = setTimeout(this.setLoader, 10);
+    this.loaderTimeout = setTimeout(this.setLoader, 50);
   }
 
   render() {
-    // debugger;
     return (
       <div
         className="lazy-img"

@@ -3,8 +3,7 @@
 
 .nav-main {
   z-index: 3;
-  // border-bottom: $border-size solid $color-primary;
-  box-shadow: 0px 1px 8px 0px $color-primary;
+  border-bottom: $nav-border-size solid $color-primary;
   width: 100%;
   background: $color-secondary;
   position: absolute;
