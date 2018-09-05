@@ -5,10 +5,10 @@ class LazyImg extends React.Component {
   constructor(props) {
     super(props);
 
-    this.foo = 2;
     this.setLoader = this.setLoader.bind(this);
     this.state = { imageStatus: "" };
   }
+
 
   setLoader() {
     this.setState({ imageStatus: "loading" });

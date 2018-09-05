@@ -12,7 +12,6 @@ class PortfolioCarrousel extends React.Component {
     };
   }
 
-
   render() {
     const {
       projects,

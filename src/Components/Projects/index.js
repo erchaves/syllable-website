@@ -20,6 +20,22 @@ class Projects extends React.Component {
     this.handleClickNext = this.handleClickNext.bind(this);
   }
 
+  componentDidMount () {
+    this.preloadImages();
+  }
+
+  preloadImages() {
+    // give the page load a head start
+    const delay = 100;
+
+    setTimeout(() => {
+      projects.forEach((project) => {
+        const img = new Image();
+        img.src = project.image;
+      });
+    }, delay);
+  }
+
   getProjectIdx(newIdx) {
     const projectsLen = projects.length;
 
