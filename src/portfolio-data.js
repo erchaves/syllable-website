@@ -27,7 +27,8 @@ const projects = [
       "Front End Development",
       "Project Lead",
     ],
-    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/93b35367582625.5b3e78819374c.png",
+    // "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/93b35367582625.5b3e78819374c.png",
+    "image": "/portfolio-images/citizen_cover.jpg",
     "link": "https://www.behance.net/gallery/67582625/Project-Management-Development-Citizen-Music-Website",
   },
   {
@@ -38,7 +39,8 @@ const projects = [
       "Project Management",
       "Technology Lead",
     ],
-    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/349c0267586145.5b3fcfeed34d7.png",
+    // "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/349c0267586145.5b3fcfeed34d7.png",
+    "image": "/portfolio-images/amplify_cover.jpg",
     "link": "https://www.behance.net/gallery/67586145/Tech-consultant-for-Amplify-CUNY-Research-Foundation",
   },
   {
@@ -48,7 +50,8 @@ const projects = [
     "skills": [
       "Front End Development",
     ],
-    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/b87d1058835823.5a0b3d8231e66.png",
+    // "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/b87d1058835823.5a0b3d8231e66.png",
+    "image": "/portfolio-images/barnes_cover2.jpg",
     "link": "https://www.behance.net/gallery/58835823/Software-Development-Barnes-Foundation-Collection",
   },
   {
@@ -69,7 +72,8 @@ const projects = [
     "skills": [
       "Project Management",
     ],
-    "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/c593b334135103.56c530304442e.png",
+    // "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/c593b334135103.56c530304442e.png",
+    "image": "/portfolio-images/seeso_cover.jpg",
     "link": "https://www.behance.net/gallery/34135103/Project-Manager-at-Seeso-NBCUniversal",
   },
 ];
