@@ -20,7 +20,7 @@ class Home extends React.Component {
         <div className="page-inner">
           <NavMain logo={logo} />
           <div className="page-panel">
-            <a href="/projects" className="slogan">Tech that speaks human</a>
+            <a href="/projects" className="slogan">Tech that <span className="nowrap">speaks human</span></a>
           </div>
         </div>
         <NavSide />

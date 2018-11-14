@@ -74,6 +74,11 @@ class Projects extends React.Component {
           <div className="page-panel">
             <div className="flex-container">
               <div className="flex-cols-2 col-left">
+                <div className="mobile-disclaimer">
+                  <span>
+                    Mobile design coming soon ;)
+                  </span>
+                </div>
                 <section className="portfolio-summary-section">
                   <div className="portfolio-summary">
                     <div className="arrow arrow-prev">

@@ -29,12 +29,12 @@
     display: inline-block;
     // ensure the middle item is centered
     min-width: 6rem;
-    // todo: there might be a better solution here
-    padding: 0 9%;
     text-align: center;
     // font-weight: $font-weight-bold;
 
     &.item-primary {
+      // todo: there might be a better solution here
+      padding: 0 9%;
       font-size: $font-size-md;
       // font-family: $font-family-quote;
     }
@@ -52,5 +52,6 @@
 
   img.syllable-logo  {
     width: 4em;
+    vertical-align: middle;
   }
 }

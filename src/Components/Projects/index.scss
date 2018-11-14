@@ -106,12 +106,39 @@
     }
   }
 
+  // temp design
+  .mobile-disclaimer {
+    display: none;
+  }
+
   @media screen and (max-width: $screen-size-mobile) {
     .page-panel {
       position: relative;
     }
 
+    // temp design
+    .mobile-disclaimer {
+      display: block;
+      position: absolute;
+      top: 0;
+      margin: 0;
+      height: 80vh;
+      width: 100%;
+      text-align: center;
+      padding-top: 4rem;
+
+      span {
+        color: white;
+        height: 4rem;
+        line-height: 4rem;
+        white-space: nowrap;
+        width: 100%;
+      }
+    }
+
     .portfolio-summary-section {
+      display: none;
+
       .portfolio-summary {
         position: relative;
         top: 0;

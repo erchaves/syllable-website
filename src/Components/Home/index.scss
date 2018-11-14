@@ -5,8 +5,25 @@
   .page-panel {
     // background: url(/florence-stairs.jpg) no-repeat center center fixed;
     // background: url(/background-cropped.jpg) no-repeat center center fixed;
-    background: url(/background-temp.jpg) no-repeat center center fixed;
+    background: url(/website-background2.jpg) no-repeat center center fixed;
     background-size: cover;
+
+    // wash it out a little.
+    &:before {
+      position: absolute;
+      z-index: 1;
+      content: '';
+      opacity: .25;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: white;
+    }
+
+    a {
+      z-index: 2;
+    }
   }
 
   .slogan {
@@ -39,5 +56,16 @@
       border-radius: $border-radius-slight;
       outline: none;
     }
+
+
+    @media screen and (max-width: $screen-size-mobile) {
+      text-align: center;
+      line-height: 1em;
+      // white-space: nowrap;
+    }
   }
+}
+
+.nowrap {
+  white-space: nowrap;
 }
