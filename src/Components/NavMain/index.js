@@ -21,7 +21,7 @@ class NavMain extends React.Component {
                 }
                 {
                   !this.props.logo &&
-                  <img className={`syllable-logo`} src={`syllable-logo.png`} />
+                  <img className={`syllable-logo`} src={`/syllable-logo.png`} />
                 }
             </a>
           </li>
