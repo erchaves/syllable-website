@@ -11,18 +11,7 @@ class NavMain extends React.Component {
           </li>
           <li className="item-primary flex-item">
             <a href="/">
-              {/*
-                  <img className="syllable-logo syllable-logo-2" src="/syllable-logo-new-2.png" />
-                  <img className="syllable-logo syllable-logo-3" src="/syllable-logo-new-3.png" />
-              */}
-                {
-                  this.props.logo &&
-                  <img className={`syllable-logo syllable-logo-${this.props.logo}`} src={`/syllable-logo-new-${this.props.logo}.png`} />
-                }
-                {
-                  !this.props.logo &&
-                  <img className={`syllable-logo`} src={`/syllable-logo.png`} />
-                }
+              <img className={`syllable-logo`} src={`/syllable-logo.png`} />
             </a>
           </li>
           <li className="item-secondary flex-item">
