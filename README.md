@@ -1,10 +1,30 @@
-# React-Static - Basic Example
+# Syllable's Home Website
 
-This example is the most basic version of react-static available. It includes:
-- Babel
-- CSS imports
-- Image imports
-- File imports
-- Automatic Routing
 
-To get started, run `react-static create` and use the `basic` template.
+This website is built on React-Static: "A progressive static site generator for React".
+
+Please see the [React-Static](https://github.com/nozzle/react-static) documentation for more details about this website structure and build processes.
+
+-----
+
+## Development
+To run in development, run:
+```
+yarn start
+```
+
+
+## Production
+To build for production, run:
+```
+yarn build
+```
+You can test the production build with:
+```
+yarn serve
+```
+Yarn serve just serves the static build from the `/dist` folder. This folder can be deployed to a server to be run as a static build.
+
+
+## Deploying
+The app is running on [netlify.com](https://app.netlify.com/). The website will deploy automatically to [syllable.productions](https://www.syllable.productions/) when code is pushed to the `master` branch.
