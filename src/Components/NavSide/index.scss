@@ -34,15 +34,56 @@
     // transform: rotate(-90deg);
 
     .menu-item {
-      @include hover-effect();
-
+      // border: 1px solid green;
       color: white;
-      margin-bottom: 1.25rem;
       display: block;
-      margin-left: -.15em;
+      margin-bottom: 1.25rem;
+      text-align: left;
+      width: 10rem;
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      &:hover {
+        .menu-item__label {
+          transform: translate(0);
+        }
+
+        .menu-item__icon {
+          background: white;
+          color: $color-primary;
+        }
+      }
+
+      .menu-item__icon,
+      .menu-item__label {
+        display: inline-block;
+        height: 1.5rem;
+        padding: .25rem;
+        position: relative;
+      }
+
+      .menu-item__icon {
+        // border: 1px solid red;
+        transition: all .2s ease-in;
+        width: 2rem;
+        z-index: 2;
+
+        // &:before {
+        //   margin-top: .7rem;
+        // }
+      }
+
+      .menu-item__label {
+        background: white;
+        color: $color-primary;
+        font-size: 1rem;
+        text-align: left;
+        text-transform: uppercase;
+        transform: translate(calc(-100% - 2.6rem ));
+        transition: transform .3s ease-in;
+        transition-delay: .2s;
       }
     }
 
@@ -50,7 +91,7 @@
     .icon-twitter {
       font-size: .85em;
       // make it feel more centered
-      margin-left: -.07em;
+      // margin-left: -.07em;
     }
 
     .icon-behance {
