@@ -2,7 +2,7 @@ import React from 'react';
 import NavMain from '../NavMain';
 import NavSide from '../NavSide';
 import ProjectSummary from '../ProjectSummary';
-import PortfolioCarrousel from '../PortfolioCarrousel';
+import PortfolioCarousel from '../PortfolioCarousel';
 import portfolioData from '../../portfolio-data';
 import './index.scss';
 
@@ -97,9 +97,9 @@ class Projects extends React.Component {
                 </section>
               </div>
               <div className="flex-cols-2 col-right">
-                <section className="portfolio-carrousel-section">
-                  <div className="portfolio-carrousel-wrap">
-                    <PortfolioCarrousel projects={projects} currentProjectIdx={this.state.currentProject} />
+                <section className="portfolio-carousel-section">
+                  <div className="portfolio-carousel-wrap">
+                    <PortfolioCarousel projects={projects} currentProjectIdx={this.state.currentProject} />
                   </div>
                 </section>
               </div>

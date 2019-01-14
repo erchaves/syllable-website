@@ -10,14 +10,14 @@
     position: relative;
   }
 
-  .portfolio-carrousel-section {
+  .portfolio-carousel-section {
     position: relative;
-    // remove the padding for this portfolio-carrousel-wrap
+    // remove the padding for this portfolio-carousel-wrap
     padding: 0;
     height: 100%;
     overflow-y: hidden;
 
-    .portfolio-carrousel-wrap {
+    .portfolio-carousel-wrap {
       position: absolute;
       overflow-y: auto;
       top: 0;
@@ -97,7 +97,7 @@
 
   // fix for now to simplify things
   &.single-project-view {
-    .portfolio-carrousel {
+    .portfolio-carousel {
       // @include center-vert();
 
       // padding: inherit;
@@ -147,12 +147,12 @@
     }
 
     &.single-project-view {
-      .portfolio-carrousel-wrap {
+      .portfolio-carousel-wrap {
         padding: 0;
       }
 
-      .portfolio-carrousel-wrap,
-      .portfolio-carrousel {
+      .portfolio-carousel-wrap,
+      .portfolio-carousel {
         position: relative;
         top: 0;
         transform: none;

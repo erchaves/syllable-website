@@ -3,7 +3,7 @@ import LazyImg from '../LazyImg';
 
 import './index.scss';
 
-class PortfolioCarrousel extends React.Component {
+class PortfolioCarousel extends React.Component {
   constructor() {
     super();
 
@@ -25,10 +25,10 @@ class PortfolioCarrousel extends React.Component {
     currentProject.idx = currentProjectIdx;
 
     return (
-      <div className="portfolio-carrousel" id="portfolioCarrousel">
+      <div className="portfolio-carousel" id="portfolioCarousel">
         {
           // projects.map((project, idx) => {
-          //   return <div className="portfolio-carrousel-frame" key={idx}>
+          //   return <div className="portfolio-carousel-frame" key={idx}>
           //       <span className="project-img" id={`img${idx}`} />
           //     {/*
           //     <img className="project-img" src={project.image } alt={project.name} id={`img${idx}`} />
@@ -36,7 +36,7 @@ class PortfolioCarrousel extends React.Component {
           //   </div>
           // })
         }
-        <div className="portfolio-carrousel-frame" >
+        <div className="portfolio-carousel-frame" >
           <LazyImg src={currentProject.image } alt={currentProject.name} id={`img${currentProject.idx}`} />
           {/*
           <img className="project-img" src={currentProject.image } alt={currentProject.name} id={`img${currentProject.idx}`} />
@@ -48,4 +48,4 @@ class PortfolioCarrousel extends React.Component {
   }
 }
 
-export default PortfolioCarrousel;
+export default PortfolioCarousel;

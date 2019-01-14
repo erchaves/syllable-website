@@ -16,14 +16,14 @@ body {
   padding: 0;
 
   .page {
-  // when these were added to just the body, they weren't winning out for some reason
-  // Note: this was due to this bug: https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/200
-  // Fix for now is to make the reset.css a reset.scss.
-  font-family: $font-family;
-  letter-spacing: $letter-spacing;
-  line-height: $line-height;
-  font-size: $font-size-sm;
-  background: $color-primary;
+    // when these were added to just the body, they weren't winning out for some reason
+    // Note: this was due to this bug: https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/200
+    // Fix for now is to make the reset.css a reset.scss.
+    font-family: $font-family;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+    font-size: $font-size-sm;
+    background: $color-primary;
   }
 }
 
