@@ -1,163 +1,101 @@
 @import '../../shared-styles/variables.scss';
 @import '../../shared-styles/mixins.scss';
 
+
+.projects__nav {
+  position: absolute;
+  z-index: 3;
+
+    &.arrow-prev,
+    &.arrow-next {
+
+      top: 15rem;
+
+      @media screen and (min-width: $screen-size-mobile) {
+        top: 50vh;
+      }
+
+      button {
+        background: $color-secondary;
+        box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+        cursor: pointer;
+        position: absolute;
+
+         &:focus {
+           outline: 0;
+         }
+
+      }
+    }
+
+    &.arrow-prev {
+      left: 1.2rem;
+
+      button {
+        &:before {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+
+    &.arrow-next {
+      right: 3rem;
+
+      button {
+        &:before {
+          transform: rotate(90deg);
+        }
+      }
+    }
+}
+
+.page-inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+
+  @media screen and (min-width: $screen-size-mobile) {
+    flex-direction: row;
+  }
+}
+
 .page-projects {
-  .flex-container {
-    min-height: 100%;
+  position: relative;
+
+  .portfolio-panel {
+    box-sizing: border-box;
+    height: 50%;
+
+    @media screen and (min-width: $screen-size-mobile) {
+      height: auto;
+      width: 50%;
+    }
   }
 
-  .col-left {
-    position: relative;
-  }
+  .portfolio-panel {
+    .lazy-img {
+      height: 100%;
+      position: relative;
+      width: 100%;
 
-  .portfolio-carousel-section {
-    position: relative;
-    // remove the padding for this portfolio-carousel-wrap
-    padding: 0;
-    height: 100%;
-    overflow-y: hidden;
-
-    .portfolio-carousel-wrap {
-      position: absolute;
-      overflow-y: auto;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 
   .portfolio-summary-section {
-    .portfolio-summary {
-      @include center-vert();
+    background: $color-secondary;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
 
-      left: 0;
-      right: 0;
-      padding: inherit;
-    }
-  }
-
-  .arrow {
-    text-align: center;
-    width: 100%;
-
-    &.arrow-next {
-      transform: rotate(180deg);
-    }
-
-    button {
-      @include hover-effect-link();
-
-      font-size: $font-size-md;
-      cursor: pointer;
-      display: inline-block;
-      // make the targer nicer with an extra .5rem
-      margin-bottom: $margin-lg - .5rem;
-      padding: .5rem;
-    }
-
-  }
-
-  // try this for a fix
-  &.side-arrows {
-    .arrow {
-      position: absolute;
-      top: 50%;
-      height: 0;
-
-      button {
-        transform: translateY(-50%);
-      }
-
-      &.arrow-prev {
-        button {
-          &:before {
-            transform: rotate(-90deg);
-          }
-        }
-
-        left: 0;
-        text-align: left;
-      }
-
-      &.arrow-next {
-        transform: none;
-
-        button {
-          &:before {
-            transform: rotate(90deg);
-          }
-        }
-
-        right: 0;
-        text-align: right;
-      }
-    }
-  }
-
-  // fix for now to simplify things
-  &.single-project-view {
-    .portfolio-carousel {
-      // @include center-vert();
-
-      // padding: inherit;
-      // left: 0;
-      // right: 0;
-    }
-  }
-
-  // temp design
-  .mobile-disclaimer {
-    display: none;
-  }
-
-  @media screen and (max-width: $screen-size-mobile) {
-    .page-panel {
-      position: relative;
-    }
-
-    // temp design
-    .mobile-disclaimer {
-      background: $color-primary;
-      display: block;
-      position: absolute;
-      top: 0;
-      margin: 0;
-      height: 80vh;
-      width: 100%;
-      text-align: center;
-      padding-top: 4rem;
-
-      span {
-        color: white;
-        height: 4rem;
-        line-height: 4rem;
-        white-space: nowrap;
-        width: 100%;
-      }
-    }
-
-    .portfolio-summary-section {
-      display: none;
-
-      .portfolio-summary {
-        position: relative;
-        top: 0;
-        transform: none;
-      }
-    }
-
-    &.single-project-view {
-      .portfolio-carousel-wrap {
-        padding: 0;
-      }
-
-      .portfolio-carousel-wrap,
-      .portfolio-carousel {
-        position: relative;
-        top: 0;
-        transform: none;
-      }
+    @media screen and (max-width: $screen-size-mobile) {
+      margin-top: -.4rem;
+      flex-grow: 1;
     }
   }
 }

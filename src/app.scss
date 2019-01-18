@@ -9,6 +9,7 @@
 html,
 body {
   font-size: $font-size-base;
+  background: $color-primary;
 }
 
 body {
@@ -50,16 +51,15 @@ button {
 }
 
 
-// .page-inner {
-//   margin: 0 auto;
-// }
+.page-inner {
+  // offset for the nav-sides
+  padding: $nav-main-height $nav-side-width 0;
+}
 
 .page-panel {
   @include full-size();
   // offset for the main nav
   top: $nav-main-height;
-  // offset for the nav-sides
-  padding: 0 $nav-side-width;
 
   background: $color-secondary;
 
