@@ -54,6 +54,7 @@ button {
 .page-inner {
   // offset for the nav-sides
   padding: $nav-main-height $nav-side-width 0;
+  box-sizing: border-box;
 }
 
 .page-panel {

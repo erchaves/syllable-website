@@ -7,8 +7,8 @@ class About extends React.Component {
   render() {
     return (
       <div className="page page-about">
+        <NavMain />
         <div className="page-inner">
-          <NavMain />
           <div className="page-panel">
             <div className="flex-container">
               <div className="flex-cols-2">
