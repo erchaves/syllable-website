@@ -3,7 +3,7 @@
 
 .project-summary {
   text-align: center;
-  padding: 0 $margin-sm;
+  padding: 0 $margin-md;
 
   &[data-is-current-project='false'] {
     // todo
@@ -22,22 +22,18 @@
     transition-property: opacity;
   }
 
-  .name,
-  .skills {
+  .project-summary__name,
+  .project-summary__skills {
     @include small-text();
   }
 
-  .name {
-    margin-bottom: $margin-md;
-  }
-
-  .skills {
-
-  }
-
-  .summary {
+  .project-summary__text {
     font-size: $font-size-lg;
-    margin-bottom: $margin-md;
+    margin: $margin-md  0;
+
+    @media screen and (max-width: $screen-size-mobile) {
+      font-size: $font-size-md;
+    }
   }
 
   .pipe {

@@ -2,19 +2,20 @@
 @import '../../shared-styles/mixins.scss';
 
 .lazy-img {
+  position: relative;
+
   .loading-icon {
     @include center-both();
-
+    display: none;
     font-size: 2rem;
     // compensate for icon width
     margin-left: -1rem;
-
-    display: none;
+    z-index: 3;
   }
 
   &[data-status="loading"] {
     img {
-      opacity: .1;
+      opacity: .4;
     }
 
     .loading-icon {

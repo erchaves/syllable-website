@@ -2,7 +2,7 @@ import React from 'react';
 import NavMain from '../NavMain';
 import NavSide from '../NavSide';
 import ProjectSummary from '../ProjectSummary';
-import PortfolioCarrousel from '../PortfolioCarrousel';
+import PortfolioImage from '../PortfolioImage';
 import portfolioData from '../../portfolio-data';
 import './index.scss';
 
@@ -68,44 +68,32 @@ class Projects extends React.Component {
 
   render() {
     return (
-      <div className="page page-projects side-arrows single-project-view">
+      <div className="page page-projects side-arrows">
+        <NavMain />
+
         <div className="page-inner">
-          <NavMain />
-          <div className="page-panel">
-            <div className="flex-container">
-              <div className="flex-cols-2 col-left">
-                <div className="mobile-disclaimer">
-                  <span>
-                    Mobile design coming soon ;)
-                  </span>
-                </div>
-                <section className="portfolio-summary-section">
-                  <div className="portfolio-summary">
-                    <div className="arrow arrow-prev">
-                      <button className="icon-arrow-up" onClick={this.handleClickPrev}></button>
-                    </div>
-                    {
-                      // todo
-                      projects.map((project, idx) => {
-                        return <ProjectSummary project={project} key={idx} isCurrentProject={this.state.currentProject === idx} />
-                      })
-                    }
-                    <div className="arrow arrow-next">
-                      <button className="icon-arrow-up" onClick={this.handleClickNext}></button>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div className="flex-cols-2 col-right">
-                <section className="portfolio-carrousel-section">
-                  <div className="portfolio-carrousel-wrap">
-                    <PortfolioCarrousel projects={projects} currentProjectIdx={this.state.currentProject} />
-                  </div>
-                </section>
-              </div>
+          <div className="projects__nav arrow-prev">
+            <button className="icon-arrow-up" onClick={this.handleClickPrev}></button>
+          </div>
+
+          <section className="portfolio-panel">
+            <PortfolioImage projects={projects} currentProjectIdx={this.state.currentProject} />
+          </section>
+          <section className="portfolio-panel portfolio-summary-section">
+            <div className="portfolio-summary">
+              { // todo
+                projects.map((project, idx) => {
+                  return <ProjectSummary project={project} key={idx} isCurrentProject={this.state.currentProject === idx} />
+                })
+              }
             </div>
+          </section>
+
+          <div className="projects__nav arrow-next">
+            <button className="icon-arrow-up" onClick={this.handleClickNext}></button>
           </div>
         </div>
+
         <NavSide />
       </div>
     );

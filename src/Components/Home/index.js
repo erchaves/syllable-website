@@ -17,8 +17,8 @@ class Home extends React.Component {
 
     return (
       <div className="page page-home">
+        <NavMain logo={logo} />
         <div className="page-inner">
-          <NavMain logo={logo} />
           <div className="page-panel">
             <a href="/projects" className="slogan">Tech that <span className="nowrap">speaks human</span></a>
           </div>

@@ -35,12 +35,12 @@ class LazyImg extends React.Component {
         className="lazy-img"
         data-status={this.state.imageStatus}
       >
+        <span className="loading-icon icon-spin2 animate-spin"></span>
         <img
           src={this.props.src}
           onLoad={this.handleImageLoaded.bind(this)}
           onError={this.handleImageErrored.bind(this)}
         />
-        <span className="loading-icon icon-spin2 animate-spin"></span>
       </div>
     );
   }

@@ -9,6 +9,7 @@
 html,
 body {
   font-size: $font-size-base;
+  background: $color-primary;
 }
 
 body {
@@ -16,14 +17,14 @@ body {
   padding: 0;
 
   .page {
-  // when these were added to just the body, they weren't winning out for some reason
-  // Note: this was due to this bug: https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/200
-  // Fix for now is to make the reset.css a reset.scss.
-  font-family: $font-family;
-  letter-spacing: $letter-spacing;
-  line-height: $line-height;
-  font-size: $font-size-sm;
-  background: $color-primary;
+    // when these were added to just the body, they weren't winning out for some reason
+    // Note: this was due to this bug: https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/200
+    // Fix for now is to make the reset.css a reset.scss.
+    font-family: $font-family;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+    font-size: $font-size-sm;
+    background: $color-primary;
   }
 }
 
@@ -50,16 +51,16 @@ button {
 }
 
 
-// .page-inner {
-//   margin: 0 auto;
-// }
+.page-inner {
+  // offset for the nav-sides
+  padding: $nav-main-height $nav-side-width 0;
+  box-sizing: border-box;
+}
 
 .page-panel {
   @include full-size();
   // offset for the main nav
   top: $nav-main-height;
-  // offset for the nav-sides
-  padding: 0 $nav-side-width;
 
   background: $color-secondary;
 

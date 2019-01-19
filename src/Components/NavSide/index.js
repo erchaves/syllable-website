@@ -8,21 +8,30 @@ class NavSide extends React.Component {
         <div className="bar-wrap left">
           <div className="bar">
             <div className="menu">
-              <a className="menu-item" href="https://www.behance.net/erchaves">
-                <span className="icon-behance"></span>
-              </a>
               <a className="menu-item" href="https://medium.com/@syllable">
-                <span className="icon-medium"></span>
+                <div className="menu-item__animation-wrapper">
+                  <span className="menu-item__icon icon-medium"></span>
+                  <span className="menu-item__label">Blog</span>
+                </div>
+              </a>
+              <a className="menu-item" href="https://www.behance.net/erchaves">
+                <div className="menu-item__animation-wrapper">
+                  <span className="menu-item__icon icon-behance"></span>
+                  <span className="menu-item__label">Portfolio</span>
+                </div>
               </a>
               <a className="menu-item" href="https://twitter.com/syllable_team">
-                <span className="icon-twitter"></span>
+                <div className="menu-item__animation-wrapper">
+                  <span className="menu-item__icon icon-twitter"></span>
+                  <span className="menu-item__label">Twitter</span>
+                </div>
               </a>
             </div>
           </div>
         </div>
+
         <div className="bar-wrap right">
           <div className="bar">
-            right
           </div>
         </div>
       </div>
