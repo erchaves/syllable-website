@@ -10,7 +10,7 @@ class NavMain extends React.Component {
         </a>
         <ul className="flex-wrap nav-items">
           <li className="item-secondary flex-item">
-            <a href="/about">Profile</a>
+            <a href="/about">About</a>
           </li>
           <li className="item-secondary flex-item">
             <a href="/projects">Projects</a>
