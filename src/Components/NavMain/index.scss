@@ -2,16 +2,18 @@
 @import '../../shared-styles/mixins.scss';
 
 .nav-main {
-  z-index: 3;
-  border-bottom: $nav-border-size solid $color-primary;
-  width: 100%;
+  align-items: center;
   background: $color-secondary;
+  border-bottom: $nav-border-size solid $color-primary;
+  display: flex;
+  height: $nav-main-height;
+  left: 0;
   position: fixed;
   width: 100%;
-  left: 0;
+  z-index: 3;
 
-  .flex-wrap {
-    height: $nav-main-height;
+  @media screen and (max-width: $screen-size-mobile) {
+    height: calc(#{$nav-main-height} / 1.75);
   }
 
   a {
@@ -22,25 +24,30 @@
     }
   }
 
-  li {
-    @include flex-wrap();
-
-    float: left;
-    display: inline-block;
-    // ensure the middle item is centered
-    min-width: 6rem;
-    text-align: center;
-    // font-weight: $font-weight-bold;
-
-    &.item-primary {
-      // todo: there might be a better solution here
-      padding: 0 9%;
-      font-size: $font-size-md;
-      // font-family: $font-family-quote;
-    }
+  .nav-logo {
+    left: 1rem;
+    position: absolute;
 
     @media screen and (max-width: $screen-size-mobile) {
-      padding: 0 1rem;
+      left: .5rem;
+
+      img.syllable-logo {
+        width: 4rem;
+      }
+    }
+  }
+
+  .nav-items {
+    width: 100%;
+
+    li {
+      font-size: $font-size-md;
+      margin: 0 1rem;
+      text-align: center;
+
+      @media screen and (max-width: $screen-size-mobile) {
+        font-size: 1rem;
+      }
     }
   }
 
