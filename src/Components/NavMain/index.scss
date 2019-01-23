@@ -8,12 +8,14 @@
   display: flex;
   height: $nav-main-height;
   left: 0;
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 3;
 
   @media screen and (max-width: $screen-size-mobile) {
-    height: calc(#{$nav-main-height} / 1.75);
+    border-bottom-width: 0;
+    height: $nav-main-height-mobile;
+    position: fixed;
   }
 
   a {

@@ -52,7 +52,6 @@
 .page-inner {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   position: relative;
 
   @media screen and (min-width: $screen-size-mobile) {
@@ -64,16 +63,10 @@
   position: relative;
 
   .portfolio-panel {
-    box-sizing: border-box;
-    height: 50%;
-
     @media screen and (min-width: $screen-size-mobile) {
-      height: auto;
       width: 50%;
     }
-  }
 
-  .portfolio-panel {
     .lazy-img {
       height: 100%;
       position: relative;
@@ -93,8 +86,11 @@
     align-items: center;
     padding: 2rem 0;
 
+    .portfolio-summary {
+      margin: auto;
+    }
+
     @media screen and (max-width: $screen-size-mobile) {
-      margin-top: -.4rem;
       flex-grow: 1;
     }
   }

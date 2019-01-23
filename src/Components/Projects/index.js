@@ -76,10 +76,10 @@ class Projects extends React.Component {
             <button className="icon-arrow-up" onClick={this.handleClickPrev}></button>
           </div>
 
-          <section className="portfolio-panel">
+          <section className="two-col-panel portfolio-panel">
             <PortfolioImage projects={projects} currentProjectIdx={this.state.currentProject} />
           </section>
-          <section className="portfolio-panel portfolio-summary-section">
+          <section className="two-col-panel scroll portfolio-panel portfolio-summary-section">
             <div className="portfolio-summary">
               { // todo
                 projects.map((project, idx) => {

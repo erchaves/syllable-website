@@ -41,6 +41,7 @@ $nav-side-width: 2.5rem;
 $nav-border-size: 2px;
 $slogan-border-size: .25rem;
 $nav-main-height: 4rem;
+$nav-main-height-mobile: calc(#{$nav-main-height} / 1.75);
 $opacity-off-hover: .8;
 $tagline-offset: 8vh;
 $transition-time: .25s;
