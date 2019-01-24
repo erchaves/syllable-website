@@ -3,13 +3,14 @@
 
 
 .projects__nav {
-  position: absolute;
+  position: fixed;
   z-index: 3;
 
     &.arrow-prev,
     &.arrow-next {
-
+      height: $nav-side-width;
       top: 15rem;
+      width: $nav-side-width;
 
       @media screen and (min-width: $screen-size-mobile) {
         top: 50vh;
@@ -17,9 +18,11 @@
 
       button {
         background: $color-secondary;
-        box-shadow: 1px 1px 2px rgba(0,0,0,.3);
         cursor: pointer;
-        position: absolute;
+        font-size: 1rem;
+        height: 100%;
+        line-height: 2.4;
+        width: 100%;
 
          &:focus {
            outline: 0;
@@ -29,7 +32,7 @@
     }
 
     &.arrow-prev {
-      left: 1.2rem;
+      left: 0;
 
       button {
         &:before {
@@ -39,7 +42,7 @@
     }
 
     &.arrow-next {
-      right: 3rem;
+      right: 0;
 
       button {
         &:before {
