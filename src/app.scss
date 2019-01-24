@@ -72,13 +72,13 @@ button {
   position: relative;
 
   &.scroll {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   @media screen and (max-width: $screen-size-mobile) {
     height: 50%;
     min-height: calc(50vh - #{$nav-main-height-mobile});
-    overflow: visible;
+    overflow-y: visible;
   }
 }
 

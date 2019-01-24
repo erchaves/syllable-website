@@ -9,11 +9,11 @@
     &.arrow-prev,
     &.arrow-next {
       height: $nav-side-width;
-      top: 15rem;
       width: $nav-side-width;
+      top: 50vh;
 
-      @media screen and (min-width: $screen-size-mobile) {
-        top: 50vh;
+      @media screen and (max-width: $screen-size-mobile) {
+        top: 15rem;
       }
 
       button {
@@ -54,11 +54,11 @@
 
 .page-inner {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
 
-  @media screen and (min-width: $screen-size-mobile) {
-    flex-direction: row;
+  @media screen and (max-width: $screen-size-mobile) {
+    flex-direction: column;
   }
 }
 
@@ -66,8 +66,10 @@
   position: relative;
 
   .portfolio-panel {
-    @media screen and (min-width: $screen-size-mobile) {
-      width: 50%;
+    width: 50%;
+
+    @media screen and (max-width: $screen-size-mobile) {
+      width: auto;
     }
 
     .lazy-img {

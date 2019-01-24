@@ -59,11 +59,13 @@ class Projects extends React.Component {
   handleClickPrev(e) {
     const currProj = this.getProjectIdx(this.state.currentProject - 1);
     this.setState({currentProject: currProj});
+    window.scrollTo(0, 0);
   }
 
   handleClickNext(e) {
     const currProj = this.getProjectIdx(this.state.currentProject + 1);
     this.setState({currentProject: currProj});
+    window.scrollTo(0, 0);
   }
 
   render() {
