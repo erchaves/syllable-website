@@ -1,6 +1,7 @@
 @import '../../shared-styles/variables.scss';
 @import '../../shared-styles/mixins.scss';
 
+$projects-nav-border-width: 1px;
 
 .projects__nav {
   position: fixed;
@@ -9,8 +10,8 @@
     &.arrow-prev,
     &.arrow-next {
       height: $nav-side-width;
-      width: $nav-side-width;
       top: 50vh;
+      width: calc(#{$nav-side-width} - #{$projects-nav-border-width});
 
       @media screen and (max-width: $screen-size-mobile) {
         top: 15rem;
@@ -32,6 +33,7 @@
     }
 
     &.arrow-prev {
+      border-right: $projects-nav-border-width solid $color-primary;
       left: 0;
 
       button {
@@ -42,6 +44,7 @@
     }
 
     &.arrow-next {
+      border-left: $projects-nav-border-width solid $color-primary;
       right: 0;
 
       button {
