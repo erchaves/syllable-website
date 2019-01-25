@@ -4,6 +4,9 @@
 .page-about {
   .flex-container {
     min-height: 100%;
+    @media screen and (max-width: $screen-size-mobile) {
+      flex-direction: column;
+    }
   }
 
   .background-map {
@@ -13,7 +16,9 @@
     background-size: cover;
   }
 
-  .flex-cols-2 {
-
+  @media screen and (max-width: $screen-size-mobile) {
+    .about-map {
+      height: 50vh;
+    }
   }
 }

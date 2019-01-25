@@ -52,16 +52,38 @@ button {
 
 
 .page-inner {
+  box-sizing: border-box;
+  height: 100vh;
   // offset for the nav-sides
   padding: $nav-main-height $nav-side-width 0;
+
+  @media screen and (max-width: $screen-size-mobile) {
+    height: auto;
+    min-height: 100vh;
+    padding-top: $nav-main-height-mobile;
+  }
+}
+
+.two-col-panel {
+  background-color: $color-secondary;
   box-sizing: border-box;
+  min-height: calc(100vh - #{$nav-main-height});
+  overflow: hidden;
+  position: relative;
+
+  &.scroll {
+    overflow-y: auto;
+  }
+
+  @media screen and (max-width: $screen-size-mobile) {
+    height: 50%;
+    min-height: calc(50vh - #{$nav-main-height-mobile});
+    overflow-y: visible;
+  }
 }
 
 .page-panel {
   @include full-size();
-  // offset for the main nav
-  top: $nav-main-height;
-
   background: $color-secondary;
 
   .h2 {
@@ -70,7 +92,7 @@ button {
   }
 
   section {
-    padding: $padding-for-section;
+    margin: $padding-for-section;
   }
 }
 
