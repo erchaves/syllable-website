@@ -11,10 +11,10 @@ class About extends React.Component {
         <div className="page-inner">
           <div className="page-panel">
             <div className="flex-container">
-              <div className="flex-cols-2">
+              <div className="two-col-panel flex-cols-2 about-map">
                 <div className="background-map"></div>
               </div>
-              <div className="flex-cols-2 col-right">
+              <div className="two-col-panel scroll flex-cols-2 col-right">
                 <section>
                   <h2 className="h2">
                     About
