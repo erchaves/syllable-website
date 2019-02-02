@@ -7,6 +7,10 @@ import portfolioData from '../../portfolio-data';
 import './index.scss';
 
 const projects = portfolioData;
+const keyLeft = 37;
+// const keyUp = 38;
+const keyRight = 39;
+// const keyDown = 40;
 
 class Projects extends React.Component {
   constructor() {
@@ -18,10 +22,24 @@ class Projects extends React.Component {
 
     this.handleClickPrev = this.handleClickPrev.bind(this);
     this.handleClickNext = this.handleClickNext.bind(this);
+    this.handleKeypress = this.handleKeypress.bind(this);
   }
 
   componentDidMount () {
     this.preloadImages();
+    this.bindEventListeners();
+  }
+
+  componentWillUnmount() {
+    this.unbindEventListeners();
+  }
+
+  bindEventListeners() {
+    document.addEventListener('keydown', this.handleKeypress);
+  }
+
+  unbindEventListeners() {
+    document.removeEventListener('keydown', this.handleKeypress);
   }
 
   preloadImages() {
@@ -56,16 +74,26 @@ class Projects extends React.Component {
     return newIdx;
   }
 
-  handleClickPrev(e) {
+  handleClickPrev() {
     const currProj = this.getProjectIdx(this.state.currentProject - 1);
     this.setState({currentProject: currProj});
     window.scrollTo(0, 0);
   }
 
-  handleClickNext(e) {
+  handleClickNext() {
     const currProj = this.getProjectIdx(this.state.currentProject + 1);
     this.setState({currentProject: currProj});
     window.scrollTo(0, 0);
+  }
+
+  handleKeypress(e) {
+    if (e.keyCode === keyLeft) {
+      this.handleClickPrev();
+    }
+
+    if (e.keyCode === keyRight) {
+      this.handleClickNext();
+    }
   }
 
   render() {

@@ -17,18 +17,27 @@ class About extends React.Component {
               <div className="two-col-panel scroll flex-cols-2 col-right">
                 <section>
                   <h2 className="h2">
-                    About
+                    About Us
                   </h2>
-                  <p>Syllable is a technology and design shop in Brooklyn, NY. </p>
-                  <p>We make digital products, like websites and apps. Sometimes we design physical products, like interactive installations. We like to stay current on emerging technologies, like AR, and blockchain.</p>
-                  <p>We think big-picture. We believe details matter.</p>
-                  <p>Technology is our craft. But our mission is to build things for <span className="no-wrap">human folks.</span></p>
-                  <p>Syllable is run by Eric Chaves. <a href="mailto:eric@syllable.productions" target='_blank' rel="noopener noreferrer">Say Hello!</a></p>
+                  <p>Syllable is a technology and design shop focused on mission-driven projects.</p>
+                  <p>Based in Brookyln, New York, we're a full service agency. We build websites and other digital products from brainstorm, to wireframe, to software development.</p>
+                  <h2 className="h2">
+                    Our Mission
+                  </h2>
+                  <p>We want to work with partners who inspire us. We seek out non-profits and cultural institutions in sectors as diverse as education, green energy, and decentralized network technology.</p>
+                  <p>Syllable is run by Eric Chaves. <a href="mailto:eric@syllable.productions" target='_blank' rel="noopener noreferrer">Let work together!</a></p>
                 </section>
                 <section>
                   <h2 className="h2">
                     Contact
                   </h2>
+                  <p>
+                    <address>
+                      Syllable Productions<br/>
+                      67 West St, Suite 401-C11 <br/>
+                      Brooklyn, NY 11222
+                    </address>
+                  </p>
                   <p>
                     <a href="mailto:eric@syllable.productions" target='_blank' rel="noopener noreferrer">eric@syllable.productions</a>
                   </p>
