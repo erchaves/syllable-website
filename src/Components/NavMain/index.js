@@ -6,7 +6,7 @@ class NavMain extends React.Component {
     return (
       <nav className="nav-main">
         <a className="nav-logo" href="/">
-          <img className={`syllable-logo`} src={`/syllable-logo.png`} />
+          <img className={`syllable-logo`} src={`/syllable-logo.svg`} />
         </a>
         <ul className="flex-wrap nav-items">
           <li className="item-secondary flex-item">
@@ -16,7 +16,7 @@ class NavMain extends React.Component {
             <a href="/projects">Projects</a>
           </li>
           <li className="item-secondary flex-item">
-            <a href="https://medium.com/@syllable">Blog</a>
+            <a href="https://medium.com/@syllable" target='_blank' rel="noopener noreferrer">Blog</a>
           </li>
         </ul>
       </nav>

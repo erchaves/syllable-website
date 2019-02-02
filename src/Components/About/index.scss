@@ -2,6 +2,11 @@
 @import '../../shared-styles/mixins.scss';
 
 .page-about {
+  .page-panel {
+    position: relative;
+    font-size: $font-size-md;
+  }
+
   .flex-container {
     min-height: 100%;
     @media screen and (max-width: $screen-size-mobile) {
