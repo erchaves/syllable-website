@@ -25,6 +25,7 @@
   .project-summary__name,
   .project-summary__skills {
     @include small-text();
+    color: $color-gray;
   }
 
   .project-summary__text {
