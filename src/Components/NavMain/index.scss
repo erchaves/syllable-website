@@ -20,7 +20,6 @@
 
   a {
     color: $color-primary;
-    font-weight: $font-weight-bold;
 
     &:hover {
       color: $color-link;
@@ -64,7 +63,7 @@
   }
 
   img.syllable-logo  {
-    width: 6em;
+    width: 5em;
     vertical-align: middle;
   }
 }
