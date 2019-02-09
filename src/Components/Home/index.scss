@@ -61,7 +61,13 @@
     @media screen and (max-width: $screen-size-mobile) {
       text-align: center;
       line-height: 1em;
-      // white-space: nowrap;
+      font-size: $font-size-sm;
+      padding: .75rem 1rem;
+      white-space: nowrap;
+    }
+
+    @media screen and (max-width: $screen-size-tiny) {
+      white-space: initial;
     }
   }
 }

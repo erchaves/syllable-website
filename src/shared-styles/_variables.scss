@@ -34,6 +34,7 @@ $font-size-lg: 2rem;
 $line-height: 1.2;
 $font-weight-bold: 600;
 
+$margin-xs: .75rem;
 $margin-sm: 1rem;
 $margin-md: 1.5rem;
 $margin-lg: 3rem;
@@ -43,6 +44,7 @@ $border-radius-slight: .25rem;
 
 $screen-size-tablet: 56rem;
 $screen-size-mobile: 50rem;
+$screen-size-tiny: 25rem;
 
 // test for shorter screens
 // $page-width: 60rem; //960px
@@ -52,7 +54,7 @@ $nav-side-width: 2.5rem;
 $nav-border-size: 2px;
 $slogan-border-size: .25rem;
 $nav-main-height: 4rem;
-$nav-main-height-mobile: calc(#{$nav-main-height} / 1.75);
+$nav-main-height-mobile: calc(#{$nav-main-height} * .75);
 $opacity-off-hover: .8;
 $tagline-offset: 8vh;
 $transition-time: .25s;

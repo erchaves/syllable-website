@@ -31,10 +31,10 @@
     position: absolute;
 
     @media screen and (max-width: $screen-size-mobile) {
-      left: .5rem;
+      left: $margin-xs;
 
       img.syllable-logo {
-        width: 4rem;
+        width: 5rem;
       }
     }
   }
@@ -43,15 +43,24 @@
     width: 100%;
     @media screen and (max-width: $screen-size-mobile) {
       justify-content: flex-end;
+      margin-right: $margin-xs;
     }
 
     li {
       font-size: $font-size-md;
-      margin: 0 3vw;
+      margin: 0 3.5vw;
       text-align: center;
+      // ensure the middle one is perfectly centered
+      min-width: 4rem;
 
       @media screen and (max-width: $screen-size-mobile) {
-        font-size: 1rem;
+        font-size: $font-size-sm;
+        margin: 0 2vw;
+        min-width: 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }
