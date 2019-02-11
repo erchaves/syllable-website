@@ -25,7 +25,7 @@ class About extends React.Component {
                     Our Mission
                   </h2>
                   <p>We want to work with partners who inspire us. We seek out non-profits and cultural institutions in sectors like education, green energy, and emerging technologies.</p>
-                  <p>Syllable is run by Eric Chaves. <a href="mailto:eric@syllable.productions" target='_blank' rel="noopener noreferrer">Let's work together!</a></p>
+                  <p>Syllable is run by Eric Chaves. <a href="mailto:eric@syllablehq.com" target='_blank' rel="noopener noreferrer">Let's work together!</a></p>
                 </section>
                 <section>
                   <h2 className="h2">
@@ -39,7 +39,7 @@ class About extends React.Component {
                     </address>
                   </p>
                   <p>
-                    <a href="mailto:eric@syllable.productions" target='_blank' rel="noopener noreferrer">eric@syllable.productions</a>
+                    <a href="mailto:eric@syllablehq.com" target='_blank' rel="noopener noreferrer">eric@syllablehq.com</a>
                   </p>
                 </section>
               </div>

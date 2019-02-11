@@ -27,4 +27,4 @@ Yarn serve just serves the static build from the `/dist` folder. This folder can
 
 
 ## Deploying
-The app is running on [netlify.com](https://app.netlify.com/). The website will deploy automatically to [syllable.productions](https://www.syllable.productions/) when code is pushed to the `master` branch.
+The app is running on [netlify.com](https://app.netlify.com/). The website will deploy automatically to [syllablehq.com](https://www.syllablehq.com/) when code is pushed to the `master` branch.
