@@ -20,7 +20,7 @@ class NavSide extends React.Component {
                   <span className="menu-item__label">Portfolio</span>
                 </div>
               </a>
-              <a className="menu-item" href="https://twitter.com/syllable_team">
+              <a className="menu-item" href="https://twitter.com/syllablehq">
                 <div className="menu-item__animation-wrapper">
                   <span className="menu-item__icon icon-twitter"></span>
                   <span className="menu-item__label">Twitter</span>
