@@ -16,7 +16,7 @@ class NavMain extends React.Component {
             <a href="/projects">Projects</a>
           </li>
           <li className="item-secondary flex-item">
-            <a href="https://medium.com/@syllable" target='_blank' rel="noopener noreferrer">Blog</a>
+            <a href="https://blog.syllablehq.com" target='_blank' rel="noopener noreferrer">Blog</a>
           </li>
         </ul>
       </nav>
