@@ -1,15 +1,15 @@
 import React from 'react'
-import { Router, Link } from 'react-static'
-import { hot } from 'react-hot-loader'
-
-import Routes from 'react-static-routes'
+import { Root, Routes } from 'react-static'
+import { Link } from '@reach/router'
 
 import './app.scss'
 
-const App = () => (
-  <Router>
-    <Routes />
-  </Router>
-)
+function App() {
+  return (
+    <Root>
+      <Routes />
+    </Root>
+  )
+}
 
-export default hot(module)(App)
+export default App

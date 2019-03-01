@@ -1,8 +1,6 @@
 import React from 'react';
-import { withRouter } from 'react-router';
 import NavMain from '../NavMain';
 import NavSide from '../NavSide';
-import queryString from 'query-string'
 
 import './index.scss';
 
@@ -12,12 +10,9 @@ class Home extends React.Component {
   }
 
   render() {
-    const params = queryString.parse(this.props.location.search)
-    const logo = params.logo;
-
     return (
       <div className="page page-home">
-        <NavMain logo={logo} />
+        <NavMain />
         <div className="page-inner">
           <div className="page-panel">
             <a href="/about" className="slogan">Tech that <span className="nowrap">speaks human</span></a>
@@ -29,4 +24,4 @@ class Home extends React.Component {
   }
 }
 
-export default withRouter(Home);
+export default Home;
