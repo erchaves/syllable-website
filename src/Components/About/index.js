@@ -31,13 +31,11 @@ class About extends React.Component {
                   <h2 className="h2">
                     Contact
                   </h2>
-                  <p>
-                    <address>
-                      Syllable Productions<br/>
-                      67 West St, Suite 401-C11 <br/>
-                      Brooklyn, NY 11222
-                    </address>
-                  </p>
+                  <address>
+                    Syllable Productions<br/>
+                    67 West St, Suite 401-C11 <br/>
+                    Brooklyn, NY 11222
+                  </address>
                   <p>
                     <a href="mailto:eric@syllablehq.com" target='_blank' rel="noopener noreferrer">eric@syllablehq.com</a>
                   </p>
