@@ -16,8 +16,12 @@ export default {
       component: 'src/Components/Projects',
     },
     {
-      path: '/about',
-      component: 'src/Components/About',
+      path: '/studio',
+      component: 'src/Components/Studio',
+    },
+    {
+      path: '/about', //previous page name
+      component: 'src/Components/Studio',
     },
     {
       path: '404',

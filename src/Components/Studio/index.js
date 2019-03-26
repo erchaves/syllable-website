@@ -3,11 +3,19 @@ import NavMain from '../NavMain';
 import NavSide from '../NavSide';
 import './index.scss';
 
-class About extends React.Component {
+class Studio extends React.Component {
+
+  componentDidMount() {
+    //hack in case old page name 'about' is served
+    if(window.location.pathname === '/about') {
+      window.location.pathname = '/studio';
+    }
+  }
+
   render() {
     return (
       <div className="page page-about">
-        <NavMain />
+        <NavMain activePage='studio'/>
         <div className="page-inner">
           <div className="page-panel">
             <div className="flex-container">
@@ -50,4 +58,4 @@ class About extends React.Component {
   }
 }
 
-export default About;
+export default Studio;

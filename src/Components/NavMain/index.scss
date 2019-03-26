@@ -65,35 +65,35 @@
     }
   }
 
-  // dot animation on large viewports
-  @media screen and (min-width: $screen-size-mobile) {
-  // giving these specific widths so hover animation doesn't move other nav items
-  .studio { width: 6rem; }
-  .projects { width: 7rem; }
-  .blog { width: 5rem; }
-
-  $dot-radius: .4rem;
-
+  // dot indicator when page is active
   .syll {
-    &::after {
-      content: '';
-      border-radius: 50%;
-      display: inline-block;
-      margin-left: 0;
-      margin-right: 0;
-      background-color: $color-link;//$color-primary; //TODO which color?
-      height: $dot-radius;
-      position: relative;
-      width: 0;
-      transition: ease-in-out .4s all;
-      top: -.2rem;
+    &.indicator::after {
+      @include pseudo-el-dot($color-primary);
+      margin-left: $pseudo-el-dot-margin;
+      margin-right: $pseudo-el-dot-margin;
+      width: $pseudo-el-dot-radius;
     }
   }
 
+  .item-secondary a:hover .syll.indicator::after {
+    background-color: $color-link;
+  }
+
+  // dot animation on large viewports
+  @media screen and (min-width: $screen-size-mobile) {
+  // giving these specific widths so hover animation doesn't move other nav items
+  .studio { width: 8rem; }
+  .projects { width: 9rem; }
+  .blog { width: 5rem; }
+
+  .syll::after {
+    @include pseudo-el-dot($color-link);
+  }
+
   .item-secondary a:hover .syll::after {
-    margin-left: .2rem;
-    margin-right: .2rem;
-    width: $dot-radius;
+    margin-left: $pseudo-el-dot-margin;
+    margin-right: $pseudo-el-dot-margin;
+    width: $pseudo-el-dot-radius;
   }
 }
 

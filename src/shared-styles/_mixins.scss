@@ -74,3 +74,18 @@
     color: $color-link;
   }
 }
+
+@mixin pseudo-el-dot($color) {
+  //width and margin are 0, set on parent el :hover
+  content: '';
+  border-radius: 50%;
+  display: inline-block;
+  background-color: $color;
+  height: $pseudo-el-dot-radius;
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  width: 0;
+  transition: ease-in-out .4s all;
+  top: -.2rem;
+}

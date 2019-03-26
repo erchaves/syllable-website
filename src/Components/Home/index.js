@@ -12,7 +12,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="page page-home">
-        <NavMain />
+        <NavMain activePage='home'/>
         <div className="page-inner">
           <div className="page-panel">
             <a href="/about" className="slogan">Tech that <span className="nowrap">speaks human</span></a>

@@ -81,3 +81,6 @@ $nav-main-height-mobile: calc(#{$nav-main-height} * .75);
 $opacity-off-hover: .8;
 $tagline-offset: 8vh;
 $transition-time: .25s;
+
+$pseudo-el-dot-radius: .4rem;
+$pseudo-el-dot-margin: calc(#{$pseudo-el-dot-radius} / 2);
