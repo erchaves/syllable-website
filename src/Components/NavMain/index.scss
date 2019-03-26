@@ -40,9 +40,11 @@
   }
 
   .nav-items {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
     width: 100%;
     @media screen and (max-width: $screen-size-mobile) {
-      justify-content: flex-end;
       margin-right: $margin-xs;
     }
 
@@ -50,8 +52,6 @@
       font-size: $font-size-md;
       margin: 0 3.5vw;
       text-align: center;
-      // ensure the middle one is perfectly centered
-      min-width: 4rem;
 
       @media screen and (max-width: $screen-size-mobile) {
         font-size: $font-size-sm;
@@ -64,6 +64,38 @@
       }
     }
   }
+
+  // dot animation on large viewports
+  @media screen and (min-width: $screen-size-mobile) {
+  // giving these specific widths so hover animation doesn't move other nav items
+  .studio { width: 6rem; }
+  .projects { width: 7rem; }
+  .blog { width: 5rem; }
+
+  $dot-radius: .4rem;
+
+  .syll {
+    &::after {
+      content: '';
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: 0;
+      margin-right: 0;
+      background-color: $color-link;//$color-primary; //TODO which color?
+      height: $dot-radius;
+      position: relative;
+      width: 0;
+      transition: ease-in-out .4s all;
+      top: -.2rem;
+    }
+  }
+
+  .item-secondary a:hover .syll::after {
+    margin-left: .2rem;
+    margin-right: .2rem;
+    width: $dot-radius;
+  }
+}
 
   .syllable-logo {
     &:before {

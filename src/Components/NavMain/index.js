@@ -8,15 +8,15 @@ class NavMain extends React.Component {
         <a className="nav-logo" href="/">
           <img className={`syllable-logo`} src={`/syllable-logo.svg`} />
         </a>
-        <ul className="flex-wrap nav-items">
-          <li className="item-secondary flex-item">
-            <a href="/about">About</a>
+        <ul className="nav-items">
+          <li className="item-secondary studio">
+            <a href="/about"><span className="syll">Stu</span><span className="syll">di</span><span>o</span></a>
           </li>
-          <li className="item-secondary flex-item">
-            <a href="/projects">Projects</a>
+          <li className="item-secondary projects">
+            <a href="/projects"><span className="syll">Pro</span><span>jects</span></a>
           </li>
-          <li className="item-secondary flex-item">
-            <a href="https://blog.syllablehq.com" target='_blank' rel="noopener noreferrer">Blog</a>
+          <li className="item-secondary blog">
+            <a href="https://blog.syllablehq.com" target='_blank' rel="noopener noreferrer"><span className="syll"></span><span className="syll">Blog</span></a>
           </li>
         </ul>
       </nav>
