@@ -26,50 +26,50 @@
     }
   }
 
-  .slogan {
-    @include center-horz();
+  // .slogan {
+  //   @include center-horz();
 
-    bottom: $tagline-offset;
-    color: $color-secondary;
-    font-size: $font-size-md;
-    font-weight: $font-weight-bold;
-    border: $slogan-border-size solid $color-secondary;
-    padding: .75rem 1rem;
-    cursor: pointer;
-    transition: $transition-time;
-    transition-property: background, color, border-radius;
+  //   bottom: $tagline-offset;
+  //   color: $color-secondary;
+  //   font-size: $font-size-md;
+  //   font-weight: $font-weight-bold;
+  //   border: $slogan-border-size solid $color-secondary;
+  //   padding: .75rem 1rem;
+  //   cursor: pointer;
+  //   transition: $transition-time;
+  //   transition-property: background, color, border-radius;
 
-    // darken the background slightly to make the text pop
-    background: rgba(73, 92, 114, 0.25);
+  //   // darken the background slightly to make the text pop
+  //   background: rgba(73, 92, 114, 0.25);
 
-    &:focus {
-      outline-offset: 0;
-      outline-style: solid;
-      outline-width: 2px;
-      outline-color: white;
-    }
+  //   &:focus {
+  //     outline-offset: 0;
+  //     outline-style: solid;
+  //     outline-width: 2px;
+  //     outline-color: white;
+  //   }
 
-    &:hover {
-      background: white;
-      color: $color-link;
-      // soften the corners just slightly
-      border-radius: $border-radius-slight;
-      outline: none;
-    }
+  //   &:hover {
+  //     background: white;
+  //     color: $color-link;
+  //     // soften the corners just slightly
+  //     border-radius: $border-radius-slight;
+  //     outline: none;
+  //   }
 
 
-    @media screen and (max-width: $screen-size-mobile) {
-      text-align: center;
-      line-height: 1em;
-      font-size: $font-size-sm;
-      padding: .75rem 1rem;
-      white-space: nowrap;
-    }
+  //   @media screen and (max-width: $screen-size-mobile) {
+  //     text-align: center;
+  //     line-height: 1em;
+  //     font-size: $font-size-sm;
+  //     padding: .75rem 1rem;
+  //     white-space: nowrap;
+  //   }
 
-    @media screen and (max-width: $screen-size-tiny) {
-      white-space: initial;
-    }
-  }
+  //   @media screen and (max-width: $screen-size-tiny) {
+  //     white-space: initial;
+  //   }
+  // }
 
   .animation {
     @include center-both();

@@ -12,12 +12,6 @@ class Home extends React.Component {
     this.state = {isStopped: false, isPaused: false};
   }
 
-  animationToggle = () => {
-    this.setState({
-      isPaused: !this.state.isPaused
-    });
-  }
-
   render() {
     const defaultOptions = {
       // loop, but we'll pause the animation at the end of each loop.
@@ -34,7 +28,7 @@ class Home extends React.Component {
         <NavMain activePage='home'/>
         <div className="page-inner">
           <div className="page-panel">
-            <div className="animation" onClick={this.animationToggle}>
+            <div className="animation">
               <Lottie
                 options={defaultOptions}
                 ref={el => {this.lottie = el}}
