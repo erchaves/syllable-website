@@ -3,7 +3,6 @@
 
 $nav-arrow-radius: 1.8rem;
 $nav-arrow-spacing: .3rem;
-$nav-arrow-movement: .15rem;
 
 .projects__nav {
   position: fixed;
@@ -36,19 +35,14 @@ $nav-arrow-movement: .15rem;
        }
     }
 
-    .icon-arrow-up:before {
-      transition: ease .3s margin-left;
+    &:hover {
+      transform: scale($icon-hover-scale);
+      transition: $animation-transition;
     }
   }
 
   &.arrow-prev {
     left: $nav-arrow-spacing;
-
-    &:hover {
-      .icon-arrow-up:before {
-        margin-left: -$nav-arrow-movement;
-      }
-    }
 
     button {
       &:before {
@@ -59,12 +53,6 @@ $nav-arrow-movement: .15rem;
 
   &.arrow-next {
     right: $nav-arrow-spacing;
-
-    &:hover {
-      .icon-arrow-up:before {
-        margin-left: $nav-arrow-movement;
-      }
-    }
 
     button {
       &:before {

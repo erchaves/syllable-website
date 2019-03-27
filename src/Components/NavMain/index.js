@@ -18,32 +18,28 @@ class NavMain extends React.Component {
           <li className="item-secondary studio">
             <a href="/studio">
               <span className={activePage === 'studio' ? "syll indicator" : "syll"}></span>
-              <span className="syll">
               Stu
-              </span>
-              <span className="syll">
+              <span className="syll"></span>
                 di
-              </span>
-              <span className="syll">
+              <span className="syll"></span>
                 o
-              </span>
+              <span className="syll"></span>
             </a>
           </li>
           <li className="item-secondary projects">
             <a href="/projects">
               <span className={activePage === 'projects' ? "syll indicator" : "syll"}></span>
-              <span className="syll">
                 Pro
-              </span>
-              <span className="syll">
+              <span className="syll"></span>
                 jects
-              </span>
+              <span className="syll"></span>
             </a>
           </li>
           <li className="item-secondary blog">
             <a href="https://blog.syllablehq.com" target='_blank' rel="noopener noreferrer">
               <span className="syll"></span>
-              <span className="syll">Blog</span>
+              Blog
+              <span className="syll"></span>
             </a>
           </li>
         </ul>

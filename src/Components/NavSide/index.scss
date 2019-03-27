@@ -51,6 +51,7 @@
       }
 
       &:hover {
+
         .menu-item__animation-wrapper {
           width: auto;
         }
@@ -61,6 +62,10 @@
         .menu-item__icon {
           background: white;
           color: $color-primary;
+
+          &:before {
+            @include hover-scale();
+          }
         }
       }
 
@@ -95,11 +100,9 @@
       }
     }
 
-    // chill with that beak poking out, bird
     .icon-twitter {
+      // chill with that beak poking out, bird
       font-size: .85em;
-      // make it feel more centered
-      // margin-left: -.07em; TODO don't think we need this anymore, double check
     }
 
     .icon-behance {

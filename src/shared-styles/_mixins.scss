@@ -75,17 +75,31 @@
   }
 }
 
-@mixin pseudo-el-dot($color) {
-  //width and margin are 0, set on parent el :hover
-  content: '';
-  border-radius: 50%;
-  display: inline-block;
-  background-color: $color;
-  height: $pseudo-el-dot-radius;
+@mixin pseudo-el-dot() {
+  // this is revealed on parent el :hover
+// it would be logical to use vertical-align: middle, but it causes pixel jank.
+// vertical-align: middle;
+  &:after {
+    @include center-both();
+
+    font-size: .8em;
+    content: '•';
+  }
+
   position: relative;
-  margin-left: 0;
-  margin-right: 0;
+  // logically, this should be 1em.
+  // But .6em this makes the height better match the letter height.
+  height: .65em;
+  display: inline-block;
+  overflow: hidden;
   width: 0;
-  transition: ease-in-out .4s all;
-  top: -.2rem;
+  transform: scale(0);
+  transition: $animation-transition;
+  transition-property: width, transform;
+}
+
+@mixin hover-scale() {
+  transform: scale($icon-hover-scale);
+  transition: $animation-transition;
+  transition-property: transform;
 }

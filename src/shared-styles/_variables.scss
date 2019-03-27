@@ -82,5 +82,6 @@ $opacity-off-hover: .8;
 $tagline-offset: 8vh;
 $transition-time: .25s;
 
-$pseudo-el-dot-radius: .4rem;
-$pseudo-el-dot-margin: calc(#{$pseudo-el-dot-radius} / 2);
+// $animation-transition: ease-in-out .4s all;
+$animation-transition: .25s cubic-bezier(0,.92,.62,1) all;
+$icon-hover-scale: 1.1;
