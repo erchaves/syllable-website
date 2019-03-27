@@ -33,10 +33,10 @@ export default {
       <Head>
         <meta charSet="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="preload" as="font" href="/fonts/MatterSQ-Regular.woff2" type="font/woff2" crossOrigin="anonymous"/>
-        <link rel="preload" as="font" href="/fonts/MatterSQ-Regular.woff" type="font/woff" crossOrigin="anonymous"/>
-        <link rel="preload" as="font" href="/fonts/MatterSQ-SemiBold.woff2" type="font/woff2" crossOrigin="anonymous"/>
-        <link rel="preload" as="font" href="/fonts/MatterSQ-SemiBold.woff" type="font/woff" crossOrigin="anonymous"/>
+        <link rel="preload" as="font" href="/fonts/Matter-Regular.woff2" type="font/woff2" crossOrigin="anonymous"/>
+        <link rel="preload" as="font" href="/fonts/Matter-Regular.woff" type="font/woff" crossOrigin="anonymous"/>
+        <link rel="preload" as="font" href="/fonts/Matter-SemiBold.woff2" type="font/woff2" crossOrigin="anonymous"/>
+        <link rel="preload" as="font" href="/fonts/Matter-SemiBold.woff" type="font/woff" crossOrigin="anonymous"/>
       </Head>
       <Body>
         {children}

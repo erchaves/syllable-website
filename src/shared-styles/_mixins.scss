@@ -77,8 +77,11 @@
 
 @mixin pseudo-el-dot() {
   // this is revealed on parent el :hover
-// it would be logical to use vertical-align: middle, but it causes pixel jank.
-// vertical-align: middle;
+
+  // try to minimize pixel jitter
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: subpixel-antialiased;
+
   &:after {
     @include center-both();
 

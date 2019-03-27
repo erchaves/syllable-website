@@ -34,16 +34,16 @@ $color-gray: #5D5E60;
 }
 
 @font-face {
-  font-family: 'MatterSQ-SemiBold';
+  font-family: 'Matter-SemiBold';
   font-weight: 400;
   font-style: normal;
   font-display: swap;
   unicode-range: U+000-5FF; /* Download only latin glyphs */
-  src: url('/fonts/MatterSQ-SemiBold.woff2') format('woff2'),
-       url('/fonts/MatterSQ-SemiBold.woff') format('woff');
+  src: url('/fonts/Matter-SemiBold.woff2') format('woff2'),
+       url('/fonts/Matter-SemiBold.woff') format('woff');
 }
 
-$font-family: 'MatterSQ-SemiBold', serif; //sans-serif;
+$font-family: 'Matter-SemiBold', serif; //sans-serif;
 
 $font-family-reg: 'Matter-Regular', serif; //sans-serif;
 
