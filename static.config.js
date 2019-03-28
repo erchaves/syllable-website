@@ -6,6 +6,7 @@ export default {
     title: 'Syllable Technology + Design',
   }),
   plugins: ["react-static-plugin-sass"],
+  siteRoot: 'https://www.syllablehq.com',
   getRoutes: async ({ dev }) => [
     {
       path: '/',

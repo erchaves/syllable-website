@@ -13,7 +13,11 @@ class Home extends React.Component {
   }
 
   render() {
-    const shouldShowClouds = window && window.location.pathname === '/clouds';
+    // for temp testing
+    let shouldShowClouds;
+    if (typeof window !== 'undefined' && window.location.pathname === '/clouds') {
+      shouldShowClouds = true;
+    }
 
     const defaultOptions = {
       // loop, but we'll pause the animation at the end of each loop.
