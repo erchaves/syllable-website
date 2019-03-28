@@ -13,6 +13,8 @@ class Home extends React.Component {
   }
 
   render() {
+    const shouldShowClouds = window && window.location.pathname === '/clouds';
+
     const defaultOptions = {
       // loop, but we'll pause the animation at the end of each loop.
       loop: false,
@@ -24,17 +26,19 @@ class Home extends React.Component {
     };
 
     return (
-      <div className="page page-home">
+      <div className={`page page-home ${shouldShowClouds ? 'page-clouds' : ''}`}>
         <NavMain activePage='home'/>
         <div className="page-inner">
           <div className="page-panel">
             <div className="animation">
-              <Lottie
-                options={defaultOptions}
-                ref={el => {this.lottie = el}}
-                isStopped={this.state.isStopped}
-                isPaused={this.state.isPaused}
-              />
+              <a href="/projects" >
+                <Lottie
+                  options={defaultOptions}
+                  ref={el => {this.lottie = el}}
+                  isStopped={this.state.isStopped}
+                  isPaused={this.state.isPaused}
+                />
+              </a>
             </div>
           </div>
         </div>
