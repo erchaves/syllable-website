@@ -1,77 +1,78 @@
 @import '../../shared-styles/variables.scss';
 @import '../../shared-styles/mixins.scss';
 
-.page-home {
-  .page-panel {
-    // background: url(/florence-stairs.jpg) no-repeat center center fixed;
-    // background: url(/background-cropped.jpg) no-repeat center center fixed;
-    background: url(/website-background2.jpg) no-repeat center center fixed;
-    background-size: cover;
+$cloud-opacity: .4;
+$cloud-anim-time: 250s;
 
-    // wash it out a little.
-    &:before {
-      position: absolute;
-      z-index: 1;
-      content: '';
-      opacity: .25;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 100%;
-      background: white;
-    }
-
-    a {
-      z-index: 2;
-    }
+@keyframes clouds {
+  0% {
+    opacity: $cloud-opacity;
+    transform: translateY(0);
   }
-
-  .slogan {
-    @include center-horz();
-
-    bottom: $tagline-offset;
-    color: $color-secondary;
-    font-size: $font-size-md;
-    font-weight: $font-weight-bold;
-    border: $slogan-border-size solid $color-secondary;
-    padding: .75rem 1rem;
-    cursor: pointer;
-    transition: $transition-time;
-    transition-property: background, color, border-radius;
-
-    // darken the background slightly to make the text pop
-    background: rgba(73, 92, 114, 0.25);
-
-    &:focus {
-      outline-offset: 0;
-      outline-style: solid;
-      outline-width: 2px;
-      outline-color: white;
-    }
-
-    &:hover {
-      background: white;
-      color: $color-link;
-      // soften the corners just slightly
-      border-radius: $border-radius-slight;
-      outline: none;
-    }
-
-
-    @media screen and (max-width: $screen-size-mobile) {
-      text-align: center;
-      line-height: 1em;
-      font-size: $font-size-sm;
-      padding: .75rem 1rem;
-      white-space: nowrap;
-    }
-
-    @media screen and (max-width: $screen-size-tiny) {
-      white-space: initial;
-    }
+  5% {opacity: .8;}
+  10% {opacity: .2;}
+  20% {opacity: .6;}
+  30% {opacity: .4;}
+  40% {opacity: .5;}
+  100% {
+    opacity: $cloud-opacity;
+    transform: translateY(-50%);
   }
 }
 
-.nowrap {
-  white-space: nowrap;
+.page-home {
+  &.page-clouds {
+    .page-panel {
+      background: #8495ab;
+      overflow: hidden;
+
+      &:before,
+      &:after {
+        @include full-size();
+
+        content: '';
+      }
+
+      &:before {
+        background: url(/clouds-tile.png) repeat-y;
+        opacity: .4;
+        // it's okay if it stretches a little. Because they're just clouds
+        background-size: 100% 100vh;
+        z-index: 1;
+        height: 200%;
+
+        animation-name: clouds;
+        animation-duration: $cloud-anim-time;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      &:after {
+        background: url(/background-brooklyn-cropped-masked.png) no-repeat center center fixed;
+        background-size: cover;
+        z-index: 2;
+      }
+    }
+  }
+
+  .page-panel {
+    background: url(/background-brooklyn-cropped.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+    a {
+      z-index: 3;
+    }
+  }
+
+  .animation {
+    @include center-both();
+    //  bias it down
+    margin-top: 2vh;
+    width: 30vw;
+    z-index: 4;
+
+    @media screen and (max-width: $screen-size-mobile) {
+      width: 75vw;
+    }
+  }
 }

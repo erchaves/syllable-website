@@ -17,6 +17,7 @@
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-hot-loader": "^4.3.12",
+    "react-lottie": "^1.2.3",
     "react-static": "^6.0.18",
     "react-static-plugin-sass": "^6.3.0"
   },

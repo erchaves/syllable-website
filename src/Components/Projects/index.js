@@ -99,7 +99,7 @@ class Projects extends React.Component {
   render() {
     return (
       <div className="page page-projects side-arrows">
-        <NavMain />
+        <NavMain activePage='projects'/>
 
         <div className="page-inner">
           <div className="projects__nav arrow-prev">

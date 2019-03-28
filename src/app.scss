@@ -3,8 +3,8 @@
 @import './shared-styles/reset.scss';
 @import './shared-styles/fontello/css/fontello.css';
 @import './shared-styles/fontello/css/animation.css';
-
-@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+//
+// @import url('https://fonts.googleapis.com/css?family=Karla:400,700');
 
 html,
 body {
@@ -56,6 +56,7 @@ button {
   height: 100vh;
   // offset for the nav-sides
   padding: $nav-main-height $nav-side-width 0;
+  font-family: $font-family-reg;
 
   @media screen and (max-width: $screen-size-mobile) {
     height: auto;

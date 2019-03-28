@@ -74,3 +74,35 @@
     color: $color-link;
   }
 }
+
+@mixin pseudo-el-dot() {
+  // this is revealed on parent el :hover
+
+  // try to minimize pixel jitter
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: subpixel-antialiased;
+
+  &:after {
+    @include center-both();
+
+    font-size: .8em;
+    content: '•';
+  }
+
+  position: relative;
+  // logically, this should be 1em.
+  // But .6em this makes the height better match the letter height.
+  height: .65em;
+  display: inline-block;
+  overflow: hidden;
+  width: 0;
+  transform: scale(0);
+  transition: $animation-transition;
+  transition-property: width, transform;
+}
+
+@mixin hover-scale() {
+  transform: scale($icon-hover-scale);
+  transition: $animation-transition;
+  transition-property: transform;
+}

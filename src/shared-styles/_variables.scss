@@ -23,7 +23,29 @@ $color-secondary: $color-white;
 // ebony grey from coolers
 $color-gray: #5D5E60;
 
-$font-family: 'Karla', sans-serif;
+@font-face {
+  font-family: 'Matter-Regular';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF; /* Download only latin glyphs */
+  src: url('/fonts/Matter-Regular.woff2') format('woff2'),
+       url('/fonts/Matter-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Matter-SemiBold';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+000-5FF; /* Download only latin glyphs */
+  src: url('/fonts/Matter-SemiBold.woff2') format('woff2'),
+       url('/fonts/Matter-SemiBold.woff') format('woff');
+}
+
+$font-family: 'Matter-SemiBold', serif; //sans-serif;
+
+$font-family-reg: 'Matter-Regular', serif; //sans-serif;
 
 $letter-spacing: -.035em;
 $letter-spacing-small-text: .04em;
@@ -59,3 +81,7 @@ $nav-main-height-mobile: calc(#{$nav-main-height} * .75);
 $opacity-off-hover: .8;
 $tagline-offset: 8vh;
 $transition-time: .25s;
+
+// $animation-transition: ease-in-out .4s all;
+$animation-transition: .25s cubic-bezier(0,.92,.62,1) all;
+$icon-hover-scale: 1.1;
