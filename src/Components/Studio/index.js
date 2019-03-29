@@ -28,7 +28,7 @@ class Studio extends React.Component {
                     About Us
                   </h2>
                   <p>Syllable is a technology and design shop focused on mission-driven projects.</p>
-                  <p>Based in Brookyln, New York, we're a full service agency. We build websites and other digital products from brainstorm, to wireframe, to software development.</p>
+                  <p>Based in Brooklyn, New York, we're a full service agency. We build websites and other digital products from brainstorm, to wireframe, to software development.</p>
                   <h2 className="h2">
                     Our Mission
                   </h2>

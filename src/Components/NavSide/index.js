@@ -14,7 +14,7 @@ class NavSide extends React.Component {
                   <span className="menu-item__label">Blog</span>
                 </div>
               </a>
-              <a className="menu-item" href="https://www.behance.net/erchaves">
+              <a className="menu-item" href="https://www.behance.net/syllablehq">
                 <div className="menu-item__animation-wrapper">
                   <span className="menu-item__icon icon-behance"></span>
                   <span className="menu-item__label">Portfolio</span>
