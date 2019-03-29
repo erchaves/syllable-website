@@ -3,17 +3,13 @@
 
 $cloud-opacity: .4;
 $cloud-anim-time: 250s;
+$cloud-anim-time-demo: 5s;
 
 @keyframes clouds {
   0% {
     opacity: $cloud-opacity;
     transform: translateY(0);
   }
-  5% {opacity: .8;}
-  10% {opacity: .2;}
-  20% {opacity: .6;}
-  30% {opacity: .4;}
-  40% {opacity: .5;}
   100% {
     opacity: $cloud-opacity;
     transform: translateY(-50%);
@@ -51,6 +47,17 @@ $cloud-anim-time: 250s;
         background: url(/background-brooklyn-cropped-masked.png) no-repeat center center fixed;
         background-size: cover;
         z-index: 2;
+      }
+    }
+
+    &.demo {
+     .page-panel {
+        overflow: visible;
+        transform: scale(.25);
+
+        &:before {
+          animation-duration: $cloud-anim-time-demo;
+        }
       }
     }
   }
