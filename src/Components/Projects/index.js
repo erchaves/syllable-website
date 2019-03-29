@@ -17,7 +17,7 @@ class Projects extends React.Component {
     super();
 
     this.state = {
-      currentProject: 0,
+      currentProjectIdx: 0,
     };
 
     this.handleClickPrev = this.handleClickPrev.bind(this);
@@ -75,14 +75,14 @@ class Projects extends React.Component {
   }
 
   handleClickPrev() {
-    const currProj = this.getProjectIdx(this.state.currentProject - 1);
-    this.setState({currentProject: currProj});
+    const currProjIdx = this.getProjectIdx(this.state.currentProjectIdx - 1);
+    this.setState({currentProjectIdx: currProjIdx});
     window.scrollTo(0, 0);
   }
 
   handleClickNext() {
-    const currProj = this.getProjectIdx(this.state.currentProject + 1);
-    this.setState({currentProject: currProj});
+    const currProjIdx = this.getProjectIdx(this.state.currentProjectIdx + 1);
+    this.setState({currentProjectIdx: currProjIdx});
     window.scrollTo(0, 0);
   }
 
@@ -96,7 +96,16 @@ class Projects extends React.Component {
     }
   }
 
+  getProjectFromIdx(targetIdx) {
+    return projects.find((project, idx) => {
+      return idx === targetIdx;
+    });
+  }
+
   render() {
+    const project = this.getProjectFromIdx(this.state.currentProjectIdx);
+    const link = project.link || project.linkPortfolio;
+
     return (
       <div className="page page-projects side-arrows">
         <NavMain activePage='projects'/>
@@ -106,17 +115,20 @@ class Projects extends React.Component {
             <button className="icon-arrow-up" onClick={this.handleClickPrev}></button>
           </div>
 
-          <section className="two-col-panel portfolio-panel">
-            <PortfolioImage projects={projects} currentProjectIdx={this.state.currentProject} />
-          </section>
           <section className="two-col-panel scroll portfolio-panel portfolio-summary-section">
             <div className="portfolio-summary">
               { // todo
                 projects.map((project, idx) => {
-                  return <ProjectSummary project={project} key={idx} isCurrentProject={this.state.currentProject === idx} />
+                  return <ProjectSummary project={project} key={idx} isCurrentProject={this.state.currentProjectIdx === idx} />
                 })
               }
             </div>
+          </section>
+
+          <section className="two-col-panel portfolio-panel">
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <PortfolioImage project={project} currentProjectIdx={this.state.currentProjectIdx} />
+            </a>
           </section>
 
           <div className="projects__nav arrow-next">

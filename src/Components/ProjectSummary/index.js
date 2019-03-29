@@ -8,10 +8,12 @@ class ProjectSummary extends React.Component {
       project,
     } = this.props;
 
+    const link = project.link || project.linkPortfolio;
+
     return (
       <div className="project-summary" data-is-current-project={this.props.isCurrentProject} >
         <div className="project-summary__name">
-          <a href={project.link} target="_blank" rel="noopener noreferrer">
+          <a href={link} target="_blank" rel="noopener noreferrer">
             <span className="pipe">|</span>
             {project.name}
             <span className="pipe">|</span>

@@ -14,23 +14,12 @@ class PortfolioImage extends React.Component {
 
   render() {
     const {
-      projects,
-      currentProjectIdx,
+      project,
     } = this.props;
-
-    const currentProject = projects.find((project, idx) => {
-      return idx === currentProjectIdx;
-    });
-
-    currentProject.idx = currentProjectIdx;
 
     return (
       <React.Fragment>
-        <LazyImg src={currentProject.image } alt={currentProject.name} id={`img${currentProject.idx}`} />
-        {/*
-        <img className="project-img" src={currentProject.image } alt={currentProject.name} id={`img${currentProject.idx}`} />
-        <span className="project-img" id={`img${currentProject.idx}`} >{currentProject.name}</span>
-        */}
+        <LazyImg src={project.image } alt={project.name}  />
       </React.Fragment>
     );
   }
