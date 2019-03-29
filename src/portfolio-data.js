@@ -9,7 +9,7 @@ const projects = [
     ],
     // "image": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/93b35367582625.5b3e78819374c.png",
     // "image": "/portfolio-images/citizen_cover.jpg",
-    "image": "/portfolio-images/citizen-cover-2.png",
+    "image": "/portfolio-images/citizen-cover.png",
     "link": "https://www.citizenmusic.com/",
     "linkPortfolio": "https://www.behance.net/gallery/67582625/Project-Management-Development-Citizen-Music-Website",
   },
