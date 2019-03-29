@@ -14,10 +14,6 @@ $nav-arrow-spacing: .3rem;
     top: 50vh;
     width: $nav-arrow-radius;
 
-    @media screen and (max-width: $screen-size-mobile) {
-      top: 15rem;
-    }
-
     button {
       background: $color-secondary;
       border-radius: 50%;

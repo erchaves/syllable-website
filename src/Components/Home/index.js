@@ -15,9 +15,14 @@ class Home extends React.Component {
   render() {
     // for temp testing
     let shouldShowClouds;
+    let shouldShowDemo;
 
     if (typeof window !== 'undefined' && window.location.pathname.search('clouds') > 0) {
       shouldShowClouds = true;
+    }
+
+    if (typeof window !== 'undefined' && window.location.search.indexOf('demo') > 0) {
+      shouldShowDemo = true;
     }
 
     const defaultOptions = {
@@ -31,7 +36,7 @@ class Home extends React.Component {
     };
 
     return (
-      <div className={`page page-home ${shouldShowClouds ? 'page-clouds' : ''}`}>
+      <div className={`page page-home ${shouldShowClouds ? 'page-clouds' : ''} ${shouldShowDemo ? 'demo' : ''}`}>
         <NavMain activePage='home'/>
         <div className="page-inner">
           <div className="page-panel">
