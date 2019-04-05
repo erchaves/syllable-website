@@ -24,12 +24,6 @@ export default {
       path: '/',
       component: 'src/Components/Home',
     },
-    // temp test
-    {
-      path: '/clouds',
-      component: 'src/Components/Home',
-      noindex: true,
-    },
     {
       path: '/projects',
       component: 'src/Components/Projects',

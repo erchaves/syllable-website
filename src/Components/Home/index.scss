@@ -17,57 +17,46 @@ $cloud-anim-time-demo: 5s;
 }
 
 .page-home {
-  &.page-clouds {
-    .page-panel {
-      background: #8495ab;
-      overflow: hidden;
+  .page-panel {
+    background: url(/background-brooklyn-cropped-bg.png);
+    overflow: hidden;
 
-      &:before,
-      &:after {
-        @include full-size();
+    &:before,
+    &:after {
+      @include full-size();
 
-        content: '';
-      }
-
-      &:before {
-        background: url(/clouds-tile.png) repeat-y;
-        opacity: .4;
-        // it's okay if it stretches a little. Because they're just clouds
-        background-size: 100% 100vh;
-        z-index: 1;
-        height: 200%;
-
-        animation-name: clouds;
-        animation-duration: $cloud-anim-time;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-      }
-
-      &:after {
-        background: url(/background-brooklyn-cropped-masked.png) no-repeat center center fixed;
-        background-size: cover;
-        z-index: 2;
-      }
+      content: '';
     }
 
-    &.demo {
-     .page-panel {
-        overflow: visible;
-        transform: scale(.25);
+    &:before {
+      background: url(/clouds-tile.png) repeat-y;
+      opacity: .4;
+      // the image is twice the height of the background
+      background-size: 100% 200vh;
+      z-index: 1;
+      height: 400%;
 
-        &:before {
-          animation-duration: $cloud-anim-time-demo;
-        }
-      }
+      animation-name: clouds;
+      animation-duration: $cloud-anim-time;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    &:after {
+      background: url(/background-brooklyn-cropped-masked.png) no-repeat center center fixed;
+      background-size: cover;
+      z-index: 2;
     }
   }
 
-  .page-panel {
-    background: url(/background-brooklyn-cropped.jpg) no-repeat center center fixed;
-    background-size: cover;
+  &.demo {
+   .page-panel {
+      overflow: visible;
+      transform: scale(.1);
 
-    a {
-      z-index: 3;
+      &:before {
+        animation-duration: $cloud-anim-time-demo;
+      }
     }
   }
 
