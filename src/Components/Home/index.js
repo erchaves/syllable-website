@@ -14,12 +14,8 @@ class Home extends React.Component {
 
   render() {
     // for temp testing
-    let shouldShowClouds;
+    let shouldShowClouds = true;
     let shouldShowDemo;
-
-    if (typeof window !== 'undefined' && window.location.pathname.search('clouds') > 0) {
-      shouldShowClouds = true;
-    }
 
     if (typeof window !== 'undefined' && window.location.search.indexOf('demo') > 0) {
       shouldShowDemo = true;
