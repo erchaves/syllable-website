@@ -16,9 +16,14 @@ $cloud-anim-time-demo: 5s;
   }
 }
 
-$sky-bottom: #d3deeb;
-// $sky-top: #5e88ba;
-$sky-top: desaturate(#3374ff, 80%);
+$sky-bottom: #ced1e0;
+// $sky-bottom: #dfdfdf;
+// $sky-top: desaturate(#3374ff, 95%);
+
+// $sky-bottom: #c7c8cd;
+// $sky-top: #c4c4ce;
+$sky-top: #b1b1c0;
+
 
 .page-home {
   .page-panel {
