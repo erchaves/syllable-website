@@ -16,9 +16,16 @@ $cloud-anim-time-demo: 5s;
   }
 }
 
+$sky-bottom: #d3deeb;
+// $sky-top: #5e88ba;
+$sky-top: desaturate(#3374ff, 80%);
+
 .page-home {
   .page-panel {
-    background: url(/background-brooklyn-cropped-bg.png);
+    // background: rgb(196,196,206);
+    // background: linear-gradient(0deg, rgba(196,196,206,1) 0%, rgba(199,200,205,1) 100%);
+    background: linear-gradient(0deg, $sky-bottom 0%, $sky-top 100%);
+    // background: linear-gradient(0deg, rgba(196,196,206,1) 0%, rgba(199,200,205,1) 100%);
     overflow: hidden;
 
     &:before,
