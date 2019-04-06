@@ -32,10 +32,10 @@ $cloud-anim-time-demo: 5s;
       background: url(/clouds-tile.png) repeat-y;
       opacity: .4;
       // the image is twice the height of the background
-      background-size: 100% 200vh;
+      background-size: auto 200vh;
+      background-position: center top;
       z-index: 1;
       height: 400%;
-
       animation-name: clouds;
       animation-duration: $cloud-anim-time;
       animation-iteration-count: infinite;
@@ -67,7 +67,11 @@ $cloud-anim-time-demo: 5s;
     width: 30vw;
     z-index: 4;
 
-    @media screen and (max-width: $screen-size-mobile) {
+    @media screen and (max-width: $screen-size-tablet) {
+      width: 50vw;
+    }
+
+    @media screen and (max-width: $screen-size-tiny) {
       width: 75vw;
     }
   }
