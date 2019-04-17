@@ -31,17 +31,18 @@ class Home extends React.Component {
   handleImageLoaded = (e) => {
     // use loadPhase instead of this.state.loadPhase to ensure that
     // react doesn't skip one when it optimizes
-    this.setState({
-      loadPhase: ++loadPhase,
-    });
-  }
+    ++loadPhase;
 
-  componentDidUpdate() {
-    // set a timer to load state 3 a short while after state 2
-    if (this.state.loadPhase === 2) {
+    if (loadPhase === 2) {
+      this.setState({
+        loadPhase: loadPhase,
+      });
+
       setTimeout(() => {
+        ++loadPhase
+
         this.setState({
-          loadPhase: loadPhase++
+          loadPhase: loadPhase
         });
       }, delayBtwCloudsAndLogo);
     }
@@ -66,7 +67,6 @@ class Home extends React.Component {
       },
     };
 
-    const x =  this.state.loadPhase;
     return (
       <div className={`page page-home ${shouldShowClouds ? 'page-clouds' : ''} ${shouldShowDemo ? 'demo' : ''}`}>
         <div className="hidden-preloaders">
