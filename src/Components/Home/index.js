@@ -15,7 +15,8 @@ const loadPhaseImages = [
   }
 ];
 
-const delayBtwCloudsAndLogo = 500;
+const delayBtwCloudsAndLogo = 250;
+let loadPhase = 0;
 
 class Home extends React.Component {
   constructor() {
@@ -28,8 +29,10 @@ class Home extends React.Component {
   }
 
   handleImageLoaded = (e) => {
+    // use loadPhase instead of this.state.loadPhase to ensure that
+    // react doesn't skip one when it optimizes
     this.setState({
-      loadPhase: this.state.loadPhase + 1,
+      loadPhase: ++loadPhase,
     });
   }
 
@@ -38,7 +41,7 @@ class Home extends React.Component {
     if (this.state.loadPhase === 2) {
       setTimeout(() => {
         this.setState({
-          loadPhase: this.state.loadPhase + 1,
+          loadPhase: loadPhase++
         });
       }, delayBtwCloudsAndLogo);
     }
@@ -63,20 +66,18 @@ class Home extends React.Component {
       },
     };
 
+    const x =  this.state.loadPhase;
     return (
       <div className={`page page-home ${shouldShowClouds ? 'page-clouds' : ''} ${shouldShowDemo ? 'demo' : ''}`}>
         <div className="hidden-preloaders">
           <img src={loadPhaseImages[0].src} onLoad={this.handleImageLoaded} />
-          {
-            (this.state.loadPhase > 0) &&
-            <img src={loadPhaseImages[1].src} onLoad={this.handleImageLoaded} />
-          }
+          <img src={loadPhaseImages[1].src} onLoad={this.handleImageLoaded} />
         </div>
         <NavMain activePage='home'/>
         <div className="page-inner">
           <div className="page-panel">
             <div className="bg bg-building"
-              style={this.state.loadPhase > 0 ? {
+              style={this.state.loadPhase > 1 ? {
                 backgroundImage: `url(${loadPhaseImages[0].src})`,
                 opacity: 1,
               } : {}}
