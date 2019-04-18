@@ -128,7 +128,15 @@ button {
   }
 }
 
-
 .no-wrap {
   white-space: nowrap;
+}
+
+.react-static-loading {
+  // git rid of the spinning loader. It's distracting.
+  display: none !important;
+
+  svg {
+    @include center-both();
+  }
 }

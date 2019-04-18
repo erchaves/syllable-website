@@ -9,7 +9,6 @@ class LazyImg extends React.Component {
     this.state = { imageStatus: "" };
   }
 
-
   setLoader() {
     this.setState({ imageStatus: "loading" });
   }
