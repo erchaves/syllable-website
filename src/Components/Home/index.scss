@@ -36,14 +36,14 @@ $cloud-anim-time-demo: 5s;
       z-index: 2;
       // fade it in on load
       opacity: 0;
-      transition: opacity .25s;
+      transition: opacity .5s;
     }
 
     .bg-clouds-wrap {
       z-index: 1;
       // fade it in on load
       opacity: 0;
-      transition: opacity .25s;
+      transition: opacity .5s;
     }
 
     .bg-clouds {

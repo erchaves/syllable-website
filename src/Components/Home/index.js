@@ -15,20 +15,27 @@ const loadPhaseImages = [
   }
 ];
 
-const delayBtwCloudsAndLogo = 250;
+const delayBtwCloudsAndLogo = 500;
 let loadPhase = 0;
 
 class Home extends React.Component {
   constructor() {
     super();
     this.state = {
+      isLoaded: false,
       isStopped: false,
       isPaused: false,
       loadPhase: 0,
     };
   }
 
-  handleImageLoaded = (e) => {
+  componentDidMount() {
+    this.setState({
+      isLoaded: true,
+    });
+  }
+
+  handleImageLoaded = e => {
     // use loadPhase instead of this.state.loadPhase to ensure that
     // react doesn't skip one when it optimizes
     ++loadPhase;
@@ -46,6 +53,10 @@ class Home extends React.Component {
         });
       }, delayBtwCloudsAndLogo);
     }
+  }
+
+  handleImageError = e => {
+    console.log('One of the images failed to load')
   }
 
   render() {
@@ -67,11 +78,14 @@ class Home extends React.Component {
       },
     };
 
+    const imgSrc0 = this.state.isLoaded ? loadPhaseImages[0].src : null;
+    const imgSrc1 = this.state.isLoaded ? loadPhaseImages[1].src : null;
+
     return (
       <div className={`page page-home ${shouldShowClouds ? 'page-clouds' : ''} ${shouldShowDemo ? 'demo' : ''}`}>
         <div className="hidden-preloaders">
-          <img src={loadPhaseImages[0].src} onLoad={this.handleImageLoaded} />
-          <img src={loadPhaseImages[1].src} onLoad={this.handleImageLoaded} />
+          <img src={imgSrc0} onLoad={this.handleImageLoaded} onError={this.handleImageError} />
+          <img src={imgSrc1} onLoad={this.handleImageLoaded} onError={this.handleImageError} />
         </div>
         <NavMain activePage='home'/>
         <div className="page-inner">
