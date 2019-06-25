@@ -11,17 +11,6 @@ const projects = [
     "linkPortfolio": "https://www.behance.net/gallery/67582625/Project-Management-Development-Citizen-Music-Website",
   },
   {
-    "name": "Camber Systems",
-    "summary": "Camber is applying an enormous wealth of information to help state and local governments build more livable cities for more sustainable societies.",
-    "skills": [
-      "Software Development",
-      "Project Management",
-    ],
-    "image": "/portfolio-images/cambersystems.png",
-    "link": "https://www.cambersystems.com/",
-    "linkPortfolio": null,
-  },
-  {
     "name": "Amplify App",
     "summary": "Amplify is a web application that connects youth with policy makers, organizations, and youth-serving agencies by gathering youth-generated data to inform city-wide policy making and local civic action.",
     "skills": [
