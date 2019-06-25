@@ -6,9 +6,11 @@ import './app.scss'
 
 function App() {
   return (
-    <Root>
-      <Routes />
-    </Root>
+    <React.Suspense fallback={<span className="page page-loading"></span>}>
+      <Root>
+        <Routes />
+      </Root>
+    </React.Suspense>
   )
 }
 
