@@ -1,8 +1,6 @@
 import React from 'react';
 import LazyImg from '../LazyImg';
 
-import './index.scss';
-
 class PortfolioImage extends React.Component {
   constructor() {
     super();
