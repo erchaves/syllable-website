@@ -1,7 +1,7 @@
 import React from 'react';
 
 const siteRoot = 'https://www.syllablehq.com';
-const stagingSiteRoot = 'http://localhost:3000';
+const stagingSiteRoot = '/';
 const staticSiteData = {
   title: 'Syllable Technology + Design',
   siteRoot: siteRoot,
