@@ -8,12 +8,22 @@ class NavMain extends React.Component {
 
   render() {
     const activePage = this.props.activePage;
+    const shouldUseH1 = activePage === 'home' || activePage === 'projects';
 
     return (
       <nav className="nav-main">
-        <a className="nav-logo" href="/">
-          <img className={`syllable-logo`} src={`/syllable-logo.svg`} />
-        </a>
+        {
+          shouldUseH1 && <h1>
+            <a className="nav-logo" href="/">
+              <img className={`syllable-logo`} src={`/syllable-logo.svg`} alt="Syllable Technology and Design"/>
+            </a>
+          </h1>
+        }
+        {
+          !shouldUseH1 && <a className="nav-logo" href="/">
+            <img className={`syllable-logo`} src={`/syllable-logo.svg`} alt="Syllable Technology and Design"/>
+          </a>
+        }
         <ul className="nav-items">
           <li className="item-secondary studio">
             <a href="/studio">

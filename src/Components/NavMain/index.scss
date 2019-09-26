@@ -23,8 +23,7 @@
   }
 
   .nav-logo {
-    left: 1rem;
-    position: absolute;
+    margin-left: 1rem;
 
     @media screen and (max-width: $screen-size-mobile) {
       left: $margin-xs;
