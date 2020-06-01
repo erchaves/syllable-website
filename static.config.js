@@ -6,7 +6,7 @@ const staticSiteData = {
   title: 'Syllable Technology + Design',
   siteRoot: siteRoot,
   description: 'Syllable is a technology and design studio in Brooklyn, New York. We build technology for mission-driven partners like nonprofits, cultural institutions, and startups advancing emerging technology.',
-  imageUrl: `${siteRoot}/syllable-logo.png`,
+  imageUrl: `${siteRoot}/syllable-social-image.png`,
   type: 'website',
 };
 
