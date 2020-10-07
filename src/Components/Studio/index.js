@@ -40,7 +40,7 @@ class Studio extends React.Component {
                     Contact
                   </h2>
                   <address>
-                    Syllable Productions<br/>
+                    Syllable Technology & Design<br/>
                     67 West St, Suite 401-C11 <br/>
                     Brooklyn, NY 11222
                   </address>
