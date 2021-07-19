@@ -7,7 +7,7 @@ const projects = [
       "Project Management",
     ],
     "image": "/portfolio-images/citizen-cover.png",
-    "link": "https://www.citizenmusic.com/",
+    "link": "https://www.catalog.citizenmusic.com/",
     "linkPortfolio": "https://www.behance.net/gallery/67582625/Project-Management-Development-Citizen-Music-Website",
   },
   {
