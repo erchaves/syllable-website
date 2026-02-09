@@ -1,5 +1,17 @@
 const projects = [
   {
+    "name": "Paige Careers",
+    "summary": "Paige Careers is an AI-powered resume builder that guides job seekers through an intelligent conversation to uncover their best achievements and produce polished, professional resumes.",
+    "skills": [
+      "Software Development",
+      "AI",
+      "Front End Development",
+    ],
+    "image": "/portfolio-images/paige-careers-cover.png",
+    "link": "https://www.paigecareers.com/",
+    "linkPortfolio": null,
+  },
+  {
     "name": "Citizen Music App",
     "summary": "Citizen Music is a platform for streaming and purchasing music built for film and advertising. The exceptional library is comprised of live recordings by world-class artists. Tracks can be customized to order. And exclusive rights are available.",
     "skills": [
