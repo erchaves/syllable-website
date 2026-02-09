@@ -28,26 +28,22 @@ function Studio() {
                 <h1 className="h2">
                   About Syllable
                 </h1>
-                <p>Hi, we're a technology and design studio in Brooklyn, NY.</p>
-
-                <p>Syllable is a full service agency. We design and build digital products for a wide range of clients including global brands, non-profits, and startups.</p>
-              </section>
-              <section>
+                <p>Syllable is a technology and design studio in Brooklyn, New York.</p>
+                <p>We're a full stack agency designing and building websites, apps, and other digital products.</p>
                 <h2 className="h2">
-                  Our Focus
+                  Why Choose Syllable
                 </h2>
-                <p>We seek out projects that inspire us. We often partner with mission-driven sectors like cultural institutions, education, climate, and emerging technologies.</p>
-                <p>We're a fully AI-capable shop, both leveraging AI for efficiency gains and building AI tools for our clients.</p>
-              </section>
 
+                <p>Syllable is run by Eric Chaves. <a href="mailto:eric@syllablehq.com" target="_blank" rel="noopener noreferrer">Let's work together!</a></p>
+              </section>
               <section>
                 <h2 className="h2">
                   Contact
                 </h2>
                 <address>
-                  Eric Chaves <br />
                   Syllable Technology &amp; Design<br />
-
+                  67 West St, Suite 401-C11 <br />
+                  Brooklyn, NY 11222
                 </address>
                 <p>
                   <a href="mailto:eric@syllablehq.com" target="_blank" rel="noopener noreferrer">eric@syllablehq.com</a>
