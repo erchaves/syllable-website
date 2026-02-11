@@ -30,10 +30,6 @@ function Studio() {
                 </h1>
                 <p>Syllable is a technology and design studio in Brooklyn, New York.</p>
                 <p>We're a full stack agency designing and building websites, apps, and other digital products.</p>
-                <h2 className="h2">
-                  Why Choose Syllable
-                </h2>
-
                 <p>Syllable is run by Eric Chaves. <a href="mailto:eric@syllablehq.com" target="_blank" rel="noopener noreferrer">Let's work together!</a></p>
               </section>
               <section>
